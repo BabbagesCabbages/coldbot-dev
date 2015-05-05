@@ -24,6 +24,7 @@
     "apostrophe-site": "0.5.x",
     "apostrophe-snippets": "^0.5.79",
     "apostrophe-ui-2": "0.5.x",
+    "bootstrap": "^3.3.4",
     "optimist": "~0.6.0"
   },
   "devDependencies": {
