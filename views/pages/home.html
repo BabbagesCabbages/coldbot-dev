@@ -7,42 +7,6 @@
 {% endblock %}
 
 {% block main %}
-  <div class="block content">
-
-    {# maybe put page header here #}
-    <div class="inner">
-      <div class="">
-        {{ aposArea(page, 'homepageText', {
-          controls: ['style'],
-          textOnly: true,
-          styles: [
-            { value: 'h1', label: 'Text' }
-          ]
-        }) }}
-      </div>
-    </div>
-
-    {# some content #}
-    <div class="block content--bottom">
-      <div class="inner">
-        {{ aposArea(page, 'main', {
-          controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
-          styles: [
-            { value: 'p', label: 'Text' },
-            { value: 'h3', label: 'Title' },
-            { value: 'h5', label: 'Subtitle' }
-          ],
-          lockups: ['left', 'right']
-        }) }}
-      </div>
-    </div>
-  </div>
-
-  {# sample blog content #}
-  <div class="block bg-gray block--5">
-    <div class="inner">
-      {{ aposSingleton(page, 'blogWidget', 'blog', { limit: 3 }) }}
-    </div>
-  </div>
+ 
 
 {% endblock %}
