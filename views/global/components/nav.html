@@ -24,44 +24,19 @@
 			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="#">Link</a></li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li><a href="#">Action</a></li>
-					<li><a href="#">Another action</a></li>
-					<li><a href="#">Something else here</a></li>
-					<li><a href="#">Separated link</a></li>
-				</ul>
-			</li>
+			<li class="nav-item">
+				{% if not page.ancestors.length %}
+					<a href="/" class="active">{{ page.title }}</a>
+				{% else %}
+				<a href="{{ page.ancestors[0].url }}" {% if page.slug == '/' %}class="active"{% endif %}>{{ page.ancestors[0].title }}</a>
+	  			{% endif %}
+	  			</li>
+				{% for item in page.tabs %}
+			      <li class="nav-item">
+			        <a href="{{ item.url }}" {% if page.slug == item.slug %}class="active"{% endif %}>{{ item.title }}</a>
+			      </li>
+			    {% endfor %}
 		</ul>
 	</div><!-- /.navbar-collapse -->
 </nav>
-
-
-
-	<nav class="demo-nav{% if options.classes%} {{options.classes}}{% endif%}">
-		{% if options.logo %}
-			<div class="demo-nav-logo">
-				<img class="demo-apos-lockup" src="/images/demo_logo_apos_lockup.png" alt="Apostrophe">
-			</div>
-			<a href="#" class="demo-nav-close">
-				<i class="icon icon-remove"></i>
-			</a>
-		{% endif %}
-	  <ul>
-	    <li class="nav-item">
-	    	{% if not page.ancestors.length %}
-	    		<a href="/" class="active">{{ page.title }}</a>
-	    	{% else %}
-	      	<a href="{{ page.ancestors[0].url }}" {% if page.slug == '/' %}class="active"{% endif %}>{{ page.ancestors[0].title }}</a>
-	      {% endif %}
-	    </li>
-	    {% for item in page.tabs %}
-	      <li class="nav-item">
-	        <a href="{{ item.url }}" {% if page.slug == item.slug %}class="active"{% endif %}>{{ item.title }}</a>
-	      </li>
-	    {% endfor %}
-	  </ul>
-	</nav>
 {% endmacro %}
