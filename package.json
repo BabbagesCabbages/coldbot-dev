@@ -1,10 +1,10 @@
 {
-  "name": "the-new-demo",
-  "version": "0.5.0",
-  "description": "Demo site featuring typical Apostrophe features",
+  "name": "gutted-apostrophe",
+  "version": "0.0.0",
+  "description": "A gutted version of apostrophe to build on top of.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "./node_modules/.bin/nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,6 @@
   "dependencies": {
     "apostrophe-blog-2": "0.5.x",
     "apostrophe-browserify": "0.5.x",
-    "apostrophe-demo-login": "0.5.x",
     "apostrophe-editor-2": "0.5.x",
     "apostrophe-events": "^0.5.18",
     "apostrophe-groups": "0.5.x",
@@ -26,5 +25,8 @@
     "apostrophe-snippets": "^0.5.79",
     "apostrophe-ui-2": "0.5.x",
     "optimist": "~0.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.3.7"
   }
 }

@@ -7,9 +7,9 @@ site.init({
 
   // This line is required and allows apostrophe-site to use require() and manage our NPM modules for us.
   root: module,
-  shortName: 'apostrophe-sandbox',
-  hostName: 'apostrophe-sandbox',
-  title: 'Apostrophe Sandbox',
+  shortName: 'gutted-apostrophe',
+  hostName: 'gutted-apostrophe',
+  title: 'Gutted Apostrophe',
   sessionSecret: 'apostrophe sandbox demo party',
   adminPassword: 'demo',
 
@@ -114,8 +114,6 @@ site.init({
     'apostrophe-groups': {},
     'apostrophe-browserify': {
       files: ["./public/js/modules/_site.js"]
-    },
-    'apostrophe-demo-login': {
     }
   },
 
