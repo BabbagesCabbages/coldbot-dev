@@ -30,39 +30,11 @@ header { position: relative; }
   line-height: 1.25em;
   color: @white;
 
-  &:hover
-  {
-    background-color: darken(@red, 10%);
+  &:hover {
     cursor: pointer;
   }
 
-  &::before
-  {
-    position: absolute;
-    left: 1rem;
-    top: 1.3rem;
-
-    display: block;
-    content: "!";
-    width: 0.75rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid @white;
-
-    .KarlaBold(@text-medium);
-    text-align: center;
-  }
-
-  &:hover
-  {
-    &:before
-    {
-      font-family: FontAwesome;
-      content: "";
-      font-size: 13px;
-    }
-  }
-  a
-  {
+  a {
     color: white;
     font-weight: normal;
     text-decoration: underline;
@@ -79,11 +51,7 @@ header { position: relative; }
   {
     top: 1.3rem;
   }
-  &:hover:before
-  {
-    content: "!";
-    .KarlaBold(@text-medium);
-  }
+
   p { display: none; }
 
   @media screen and @narrow
@@ -105,41 +73,21 @@ header { position: relative; }
   position: relative;
   background-color: @white;
 
-  &::after
-  {
-    position: absolute;
-    top: 100%;
-    left: 0; right: 0;
-
-    display: block;
-    content: '';
-    height: 8px;
-
-    background-color: fade(@dark, 20%);
-  }
-
   .nav-item
   {
     .inline-block(top);
     padding: 0.425em 1em;
 
-    & > a
-    {
+    & > a {
       .inline-block(top);
       padding: 0.075em 0;
       .KarlaBold(@text-small);
-      color: @red;
+      color: @blue;
 
-      &.active
-      {
+      &.active {
         border-bottom: 1px solid @red;
       }
     }
   }
 }
 
-.top
-{
-  background-color: @heavy-gold;
-  padding-bottom: 2rem;
-}
