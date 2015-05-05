@@ -22,7 +22,7 @@ module.exports = {
     // Show the Apostrophe admin bar and login button at all times.
     // You'll probably want to change this to `false` later and create
     // your own suitably styled links to `/login` if desired
-    loginButton: true
+    loginButton: false
   },
 
   // Want Twitter widgets to work? Go to dev.twitter.com and create an "app", then

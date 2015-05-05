@@ -16,32 +16,13 @@
 {% block outer %}
   <div class="off-canvas-container">
     {{ nav(page, {classes: 'off-canvas-nav hide-desktop', logo: true, showChildren: true}) }}
+    {{ nav(page, {classes: 'hide-mobile'}) }}
   </div>
 {% endblock%}
 
-{% block header %}
-  <div class="block top">
-      <div class="inner demo-inner">
-        <header>
-          {{ nav(page, {classes: 'hide-mobile'}) }}
-          <a href="#" class="off-canvas-trigger hide-desktop">
-            <svg class="a-toolbox">
-              <use xlink:href="#a-toolbox" />
-            </svg>
-          </a>
-        </header>
-
-      {% block headerContent %}
-      {% endblock %}
-    </div>
-  </div>
-  <div class="block header {% block upperClass %}{% endblock %}">
-    {% block headerBackground %}{% endblock %}
-
-  </div>
-{% endblock %}
 
 {% block main %}
+
   {# most content will be just fine sitting within our 'block' class, but we always #}
   {# have the option to override the 'main' block if we want a little more control. #}
   {% block mainContent %}

@@ -1,4 +1,7 @@
 {% extends "layout.html" %}
+{% include 'pageMacros.html' %}
+{% include 'components/_index.html' %}
+{% include 'svg/_index.html' %}
 
 {% block bodyClass %}{{ super() }} home-page{% endblock %}
 
@@ -7,6 +10,546 @@
 {% endblock %}
 
 {% block main %}
- 
+   <div class="boxedlayout">
+
+    <!-- HEADER
+    ================================================== -->
+
+    {{ nav(page, {classes: 'hide-mobile'}) }}
+    <!-- PAGE CONTENT
+    ================================================== -->
+    
+    <!-- TITLE BEGINS -->
+    <div class="headerimage homeimg text-center" style="background-image: url(images/coffee2.jpg);">
+      <div class="headercontent home">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+            <img src="images/logo.png" data-scrollreveal="enter bottom over 1.4s after 0.2s">
+              <h1 style="font-family:'Lato'!important;" class="brand-heading" data-scrollreveal="enter top over 1.9s after 0.2s">Coldbot . Coffee</h1>
+              <p style="font-family:'Lato'!important;" class="lead" data-scrollreveal="enter bottom over 1.9s after 0.4s">
+                Explore Coffee
+              </p>
+              <a href="" data-scrollreveal="enter bottom over 1.9s after 0.2s" class="btn btn-default btn-lg color1 explore">Shop now<i style="position: relative;top: 0px;left: 8px;" class="fa fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- TITLE ENDS -->
+    
+    <!-- MAIN CONTENT BEGINS -->
+    <div id="homepagetemplate" class="container padtop10 padbot40">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="clear text-center sectionlatestitems">
+            <h2 class="maintitle">LATEST ITEMS</h2>
+            <div class="separatr">
+              <span>
+              <a href="shop.html" class="view-all"><i class="fa fa-reorder"></i></a>
+              </span>
+            </div>
+          </div>
+          <div class="wowitemboxlist sectionlatestitems clear" >
+          
+            <div class="wowitembox">
+              <div class="wowitemboxinner">
+                <div class="imagearea">
+                  <img width="555" height="370" src="images/coffee1.jpg" class="attachment-post-thumbnail wp-post-image" alt="163_1"/>
+                  <div class="caption">
+                    <div class="blur">
+                    </div>
+                    <div class="caption-text">
+                      <div class="captionbuttons">
+                        <a href="productsingle.html" class="captiondetails"><i class="fa fa-link"></i> VIEW DETAILS</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="notesarea">
+                  <a href="productsingle.html">
+                  <h2>Brewing Guide</h2>
+                  </a>
+                  <div class="description">
+                    <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi hic, exercitationem
+                    </p>
+                  </div>
+                  <div class="notesbottom">
+                    <div class="price fleft">
+                      ~19.00 
+                    </div>
+                    <div class="cart fright">
+                      <a href="#" class="edd-add-to-cart">
+                        <span class="edd-add-to-cart-label">Time</span>
+                      </a>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- .wowitemboxinner-->
+            </div>
+            <!-- .wowitembox-->
+            
+            <div class="wowitembox">
+              <div class="wowitemboxinner">
+                <div class="imagearea">
+                  <img width="555" height="370" src="images/coffee2.jpg" class="attachment-post-thumbnail wp-post-image" alt="166_1"/>
+                  <div class="caption">
+                    <div class="blur">
+                    </div>
+                    <div class="caption-text">
+                      <div class="captionbuttons">
+                        <a href="productsingle.html" class="captiondetails"><i class="fa fa-link"></i> VIEW DETAILS</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="notesarea">
+                  <a href="productsingle.html">
+                  <h2>Product Review</h2>
+                  </a>
+                  <div class="description">
+                    <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi hic, exercitationem
+                    </p>
+                  </div>
+                  <div class="notesbottom">
+                    <div class="price fleft">
+                      ~3.00 
+                    </div>
+                    <div class="cart fright">
+                      <a href="#" class="edd-add-to-cart">
+                        <span class="edd-add-to-cart-label">Time</span>
+                      </a>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- .wowitemboxinner-->
+            </div>
+            <!-- .wowitembox-->
+            
+            <div class="wowitembox">
+              <div class="wowitemboxinner">
+                <div class="imagearea">
+                  <img width="555" height="370" src="images/coffee3.jpg" class="attachment-post-thumbnail wp-post-image" alt="172_1"/>
+                  <div class="caption">
+                    <div class="blur">
+                    </div>
+                    <div class="caption-text">
+                      <div class="captionbuttons">
+                        <a href="productsingle.html" class="captiondetails"><i class="fa fa-link"></i> VIEW DETAILS</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="notesarea">
+                  <a href="productsingle.html">
+                  <h2>Product Review</h2>
+                  </a>
+                  <div class="description">
+                    <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi hic, exercitationem
+                    </p>
+                  </div>
+                  <div class="notesbottom">
+                    <div class="price fleft">
+                      ~7.00 
+                    </div>
+                    <div class="cart fright">
+                      <a href="#" class="edd-add-to-cart">
+                        <span class="edd-add-to-cart-label">Time</span>
+                      </a>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- .wowitemboxinner-->
+            </div>
+            <!-- .wowitembox-->
+            
+            <div class="wowitembox">
+              <div class="wowitemboxinner">
+                <div class="imagearea">
+                  <img width="555" height="370" src="images/coffee4.jpg" class="attachment-post-thumbnail wp-post-image" alt="168_1"/>
+                  <div class="caption">
+                    <div class="blur">
+                    </div>
+                    <div class="caption-text">
+                      <div class="captionbuttons">
+                        <a href="productsingle.html" class="captiondetails"><i class="fa fa-link"></i> VIEW DETAILS</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="notesarea">
+                  <a href="productsingle.html">
+                  <h2>Recipe</h2>
+                  </a>
+                  <div class="description">
+                    <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi hic, exercitationem
+                    </p>
+                  </div>
+                  <div class="notesbottom">
+                    <div class="price fleft">
+                      ~6.50 
+                    </div>
+                    <div class="cart fright">
+                      <a href="#" class="edd-add-to-cart">
+                        <span class="edd-add-to-cart-label">Time</span>
+                      </a>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- .wowitemboxinner-->
+            </div>
+            <!-- .wowitembox-->
+            
+          </div>
+          <!-- .wowitemboxlist-->
+          
+          <div class="clear">
+          </div>
+        </div>
+        </div>
+        </div>
+    <div class="actionbeforefooter text-center">
+      <div class="container">
+        <span><i class="fa fa-coffee"></i> Check out our newest batch of artisan beans roasted on the same day it's sent to you </span><br><br>
+        <a target="_blank" class="actionbutton" href="#">Craft Coffee</a>
+      </div>
+    </div>
+    <div id="homepagetemplate" class="container padtop10 padbot40">
+    <div class="row">
+      <div class="col-md-12">
+        
+      
+          <div class="divider1">
+          </div>
+          <div class="row text-center seactionitemfeatures">
+            <div class="narrowheader">
+              <h2 class="maintitle">Coffee Features</h2>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus corporis, quod iste inventore quae in voluptatum voluptates ab dicta ullam.
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="featurebox">
+              <h2><i class="fa fa-simplybuilt"></i> Product Review </h2>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus corporis, quod iste inventore quae in voluptatum voluptates ab dicta ullam.
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="featurebox">
+              <h2><i class="fa fa-street-view"></i> Free Content </h2>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus corporis, quod iste inventore quae in voluptatum voluptates ab dicta ullam.
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="featurebox">
+              <h2><i class="fa fa-leanpub"></i> Educate yourself </h2>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus corporis, quod iste inventore quae in voluptatum voluptates ab dicta ullam.
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="featurebox">
+              <h2><i class="fa fa-diamond"></i> Share with others </h2>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus corporis, quod iste inventore quae in voluptatum voluptates ab dicta ullam.
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="featurebox">
+              <h2><i class="fa fa-cart-plus"></i> Amazing Coffee </h2>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus corporis, quod iste inventore quae in voluptatum voluptates ab dicta ullam.
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="featurebox">
+              <h2><i class="fa fa-skyatlas"></i>Get Updated</h2>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus corporis, quod iste inventore quae in voluptatum voluptates ab dicta ullam.
+            </div>
+          </div>
+          <div class="clear">
+          </div>
+          <div class="divider1">
+          </div>
+          <div class="clear text-center sectionbestseller">
+            <h2 class="maintitle">BEST SELLER</h2>
+            <div class="separatr">
+              <span style="font-size: 0.77em;text-transform:uppercase;"><i class="fa fa-star"></i>&nbsp; OUR BUYERS FAVOURITES &nbsp; <i class="fa fa-star"></i></span>
+            </div>
+          </div>
+          <div class="wowitemboxlist sectionbestseller clear">
+          
+            <div class="wowitembox">
+              <div class="wowitemboxinner">
+                <div class="imagearea">
+                  <img width="555" height="370" src="images/coffee5.jpg" class="attachment-post-thumbnail wp-post-image" alt="133_1"/>
+                  <div class="caption">
+                    <div class="blur">
+                    </div>
+                    <div class="caption-text">
+                      <div class="captionbuttons">
+                        <a href="productsingle.html" class="captiondetails"><i class="fa fa-link"></i> VIEW DETAILS</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="notesarea">
+                  <a href="productsingle.html">
+                  <h2>Recipe</h2>
+                  </a>
+                  <div class="description">
+                    <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi hic, exercitationem
+                    </p>
+                  </div>
+                  <div class="notesbottom">
+                    <div class="price fleft">
+                      ~27.00 
+                    </div>
+                    <div class="cart fright">
+                      <a href="#" class="edd-add-to-cart">
+                        <span class="edd-add-to-cart-label">Time</span>
+                      </a>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- .wowitemboxinner-->
+            </div>
+            <!-- .wowitembox-->
+            
+            <div class="wowitembox">
+              <div class="wowitemboxinner">
+                <div class="imagearea">
+                  <img width="555" height="370" src="images/coffee6.jpg" class="attachment-post-thumbnail wp-post-image" alt="181_1"/>
+                  <div class="caption">
+                    <div class="blur">
+                    </div>
+                    <div class="caption-text">
+                      <div class="captionbuttons">
+                        <a href="productsingle.html" class="captiondetails"><i class="fa fa-link"></i> VIEW DETAILS</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="notesarea">
+                  <a href="productsingle.html">
+                  <h2>Brewing Guide</h2>
+                  </a>
+                  <div class="description">
+                    <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi hic, exercitationem
+                    </p>
+                  </div>
+                  <div class="notesbottom">
+                    <div class="price fleft">
+                      ~33.00 
+                    </div>
+                    <div class="cart fright">
+                      <a href="#" class="edd-add-to-cart">
+                        <span class="edd-add-to-cart-label">Time</span>
+                      </a>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- .wowitemboxinner-->
+            </div>
+            <!-- .wowitembox-->
+            
+            <div class="wowitembox">
+              <div class="wowitemboxinner">
+                <div class="imagearea">
+                  <img width="555" height="370" src="images/coffee7.jpg" class="attachment-post-thumbnail wp-post-image" alt="168_1"/>
+                  <div class="caption">
+                    <div class="blur">
+                    </div>
+                    <div class="caption-text">
+                      <div class="captionbuttons">
+                        <a href="productsingle.html" class="captiondetails"><i class="fa fa-link"></i> VIEW DETAILS</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="notesarea">
+                  <a href="productsingle.html">
+                  <h2>Brewing Guide</h2>
+                  </a>
+                  <div class="description">
+                    <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi hic, exercitationem
+                    </p>
+                  </div>
+                  <div class="notesbottom">
+                    <div class="price fleft">
+                      ~6.50 
+                    </div>
+                    <div class="cart fright">
+                      <a href="#" class="edd-add-to-cart">
+                        <span class="edd-add-to-cart-label">Time</span>
+                      </a>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- .wowitemboxinner-->
+            </div>
+            <!-- .wowitembox-->
+            
+            <div class="wowitembox">
+              <div class="wowitemboxinner">
+                <div class="imagearea">
+                  <img width="555" height="370" src="images/coffee8.jpg" class="attachment-post-thumbnail wp-post-image" alt="5_1"/>
+                  <div class="caption">
+                    <div class="blur">
+                    </div>
+                    <div class="caption-text">
+                      <div class="captionbuttons">
+                        <a href="productsingle.html" class="captiondetails"><i class="fa fa-link"></i> VIEW DETAILS</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="notesarea">
+                  <a href="productsingle.html">
+                  <h2>Product Review</h2>
+                  </a>
+                  <div class="description">
+                    <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi hic, exercitationem
+                    </p>
+                  </div>
+                  <div class="notesbottom">
+                    <div class="price fleft">
+                      ~8.00 
+                    </div>
+                    <div class="cart fright">
+                      <a href="#" class="edd-add-to-cart">
+                        <span class="edd-add-to-cart-label">Time</span>
+                      </a>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- .wowitemboxinner-->
+            </div>
+            <!-- .wowitembox-->
+            
+          </div>
+          <!-- .wowitemboxlist-->
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- MAIN CONTENT ENDS -->
+    
+    <!-- FOOTER
+    ================================================== -->
+    <footer class="themefooter section medium-padding bg-graphite">
+    <div class="container">
+      <div class="section-inner row">
+        <div class="column column-1 col-md-4 rightbd">
+          <div class="widgets">
+            <div class="widget widget_text">
+              <div class="widget-content">
+                <h3 class="widget-title">Fresh, small batch, craft coffee</h3>
+                <div class="textwidget">
+                   Our subscription service ships coffee to you on the same day it was roasted. Our coffee is selected and roasted with the cold brewing process in mind. 
+                </div>
+              </div>
+              <div class="clear">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /footer-a -->
+        <div class="column column-1 col-md-4 rightbd">
+          <div class="widgets">
+            <div class="widget widget_wysija">
+              <div class="widget-content">
+                <h3 class="widget-title">Subscribe to our Newsletter</h3>
+                <div class="widget_wysija_cont">
+                  <form class="widget_wysija">
+                    <p class="wysija-paragraph">
+                      <label>Email <span class="wysija-required">*</span></label>
+                      <input type="text" name="" class="wysija-input validate[required,custom[email]]" title="Email" value=""/>
+                    </p>
+                    <input class="wysija-submit wysija-submit-field" type="submit" value="Subscribe!"/>
+                  </form>
+                </div>
+              </div>
+              <div class="clear">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /footer-b -->
+        <div class="column column-1 col-md-4">
+          <div class="widgets">
+            <div class="widget widget_edd_categories_tags_widget">
+              <div class="widget-content">
+                <h3 class="widget-title">Tags</h3>
+                <ul class="edd-taxonomy-widget">
+                  <li><a href="#">Coffee</a></li>
+                  <li><a href="#">Coldbrew</a></li>
+                  <li><a href="#">Sumatra</a></li>
+                  <li><a href="#">Breville</a></li>
+                  <li><a href="#">Slow</a></li>
+                </ul>
+              </div>
+              <div class="clear">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /footer-c -->
+        <div class="clear">
+        </div>
+      </div>
+      <!-- /footer-inner -->
+    </div>
+    <!-- /grid -->
+    <div class="sectioncredits">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="credits-left fleft">
+            2015 &copy; All Rights Reserved Coldbot Coffee </span>
+            <ul class="footermenu fright">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="recipes.html">Recipes</a></li>
+              <li><a href="brewing-guides.html">Brewing Guides</a></li>
+              <li><a href="product-reviews.html">Product Reviews</a></li>
+            </ul>
+          </div>
+          <div class="clear">
+          </div>
+        </div>
+      </div>
+      <!-- /grid -->
+    </div>
+    <!-- /sectioncredits -->
+    </footer>
+    <!-- /footer -->
 
 {% endblock %}
