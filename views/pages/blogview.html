@@ -1,0 +1,344 @@
+{% extends "layout.html" %}
+{% include 'pageMacros.html' %}
+{% include 'components/_index.html' %}
+{% include 'svg/_index.html' %}
+
+{% block bodyClass %}{{ super() }} home-page{% endblock %}
+
+{# breadcrumbs are excluded from the homepage #}
+{% block breadcrumbs %}
+{% endblock %}
+
+{% block main %}
+	<div class="boxedlayout">
+{{ nav(page, {classes: 'hide-mobile'}) }}
+		
+		<!-- PAGE CONTENT
+		================================================== -->
+		<div class="templateblog">
+		
+			<!-- TITLE BEGINS -->
+			<div class="headerimage" style="background-image: url(images/coffebg1.jpg);margin-top:51px;">
+				<div class="headercontent">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="fleft">
+									<h1>Blog</h1>
+								</div>
+								<div class="fright breadc">
+									<a href="index.html">Home</a> / Blog
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- TITLE ENDS -->
+			
+			<div class="container padtop50 padbot40">
+				<div class="row">
+					<div class="col-md-12 button-pad">
+						<div id="filters" class="button-group">  
+					  		<button class="button btn btn-default btn-lg blog-btn explore" data-filter=".recipes">recipes</button>
+					  		<button class="button btn btn-default btn-lg blog-btn explore" data-filter=".product-reviews">product reviews</button>
+					  		<button class="button btn btn-default btn-lg blog-btn explore" data-filter=".brewing-guides">Brewing Guides</button><br><br>
+					  		<button class="button is-checked show-all" data-filter="*" alt="show all"><i class="button is-checked fa fa-bars fa-2x" data-filter="*"></i></button>
+						</div>
+					</div>
+				</div>
+					<!-- MAIN CONTENT BEGINS -->
+					<div class="col-md-12">
+						<div id="primary" class="content-area">
+							<main id="main" class="site-main" role="main">
+							<div class="wowitemboxlist isotope">
+								<div class="wowitembox element-item recipe" data-category="recipe">
+									<div class="wowitemboxinner">
+										<div class="imagearea">
+											<img width="555" height="370" src="images/coffee6.jpg" class="attachment-post-thumbnail wp-post-image" alt="124_1"/>
+											<div class="caption">
+												<div class="blur">
+												</div>
+												<div class="caption-text">
+													<div class="captionbuttons">
+														<a href="#" class="captiondetails"><i class="fa fa-link"></i> more...</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="notesarea">
+											<a href="#">
+											<h2>Embed Audio</h2>
+											</a>
+											<span class="description">&#8220;Blog&#8221; is an abbreviated version of &#8220;weblog,&#8221; which is a term used to describe websites that...</span>
+										</div>
+									</div>
+									<!-- .wowitemboxinner-->
+								</div>
+								<!-- .wowitembox-->
+								<div class="wowitembox element-item brewing-guides" data-category="brewing-guides">
+									<div class="wowitemboxinner">
+										<div class="imagearea">
+											<img width="555" height="370" src="images/coffee1.jpg" class="attachment-post-thumbnail wp-post-image" alt="165_1"/>
+											<div class="caption">
+												<div class="blur">
+												</div>
+												<div class="caption-text">
+													<div class="captionbuttons">
+														<a href="#" class="captiondetails"><i class="fa fa-link"></i> more...</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="notesarea">
+											<a href="#">
+											<h2>Image Alignement</h2>
+											</a>
+											<span class="description">Welcome to image alignment! The best way to demonstrate the ebb and flow of the various...</span>
+										</div>
+									</div>
+									<!-- .wowitemboxinner-->
+								</div>
+								<!-- .wowitembox-->
+								<div class="wowitembox element-item product-reviews" data-category="product-reviews">
+									<div class="wowitemboxinner">
+										<div class="imagearea">
+											<img width="555" height="370" src="images/coffee2.jpg" class="attachment-post-thumbnail wp-post-image" alt="173_1"/>
+											<div class="caption">
+												<div class="blur">
+												</div>
+												<div class="caption-text">
+													<div class="captionbuttons">
+														<a href="#" class="captiondetails"><i class="fa fa-link"></i> more...</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="notesarea">
+											<a href="#">
+											<h2>Embed Videos</h2>
+											</a>
+											<span class="description">People think focus means saying yes to the thing you’ve got to focus on. But that’s...</span>
+										</div>
+									</div>
+									<!-- .wowitemboxinner-->
+								</div>
+								<!-- .wowitembox-->
+								<div class="wowitembox element-item recipes" data-category="recipes">
+									<div class="wowitemboxinner">
+										<div class="imagearea">
+											<img width="555" height="370" src="images/coffee3.jpg" class="attachment-post-thumbnail wp-post-image" alt="150_1"/>
+											<div class="caption">
+												<div class="blur">
+												</div>
+												<div class="caption-text">
+													<div class="captionbuttons">
+														<a href="#" class="captiondetails"><i class="fa fa-link"></i> more...</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="notesarea">
+											<a href="#">
+											<h2>Text Alignement</h2>
+											</a>
+											<span class="description">Default This is a paragraph. It should not have any alignment of any kind. It should...</span>
+										</div>
+									</div>
+									<!-- .wowitemboxinner-->
+								</div>
+								<!-- .wowitembox-->
+								<div class="wowitembox element-item brewing-guides" data-category="brewing-guides">
+									<div class="wowitemboxinner">
+										<div class="imagearea">
+											<img width="555" height="370" src="images/coffee4.jpg" alt="144_1"/>
+											<div class="caption">
+												<div class="blur">
+												</div>
+												<div class="caption-text">
+													<div class="captionbuttons">
+														<a href="#" class="captiondetails"><i class="fa fa-link"></i> more...</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="notesarea">
+											<a href="#">
+											<h2>HTML Tags and Formatting</h2>
+											</a>
+											<span class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been...</span>
+										</div>
+									</div>
+									<!-- .wowitemboxinner-->
+								</div>
+								<!-- .wowitembox-->
+								<div class="wowitembox element-item recipes" data-category="recipes">
+									<div class="wowitemboxinner">
+										<div class="imagearea">
+											<img width="555" height="370" src="images/coffee5.jpg" class="attachment-post-thumbnail wp-post-image" alt="138_1"/>
+											<div class="caption">
+												<div class="blur">
+												</div>
+												<div class="caption-text">
+													<div class="captionbuttons">
+														<a href="#" class="captiondetails"><i class="fa fa-link"></i> more...</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="notesarea">
+											<a href="#">
+											<h2>Twitter Embed</h2>
+											</a>
+											<span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quia porro a reprehenderit dolore. Numquam modi illum, quod consectetur? Ut.</span>
+										</div>
+									</div>
+									<!-- .wowitemboxinner-->
+								</div>
+								<!-- .wowitembox-->
+							</div>
+							</main>
+						</div>
+					</div>
+					<!-- MAIN CONTENT ENDS -->
+
+					<!-- SIDEBAR BEGINS -->
+		<!-- 			<div class="col-md-3">
+						<div id="secondary" class="widget-area" role="complementary">
+							<aside id="search-3" class="widget widget_search">
+							<h1 class="widget-title section-title"><span>Search in Blog</span></h1>
+							<form role="search" method="get" class="search-form" action="#">
+								<input type="search" class="search-field" placeholder="Type and hit enter..." value="" name="s" title=""/>
+								<input type="hidden" name="post_type" value="post"/>
+							</form>
+							</aside><aside id="text-2" class="widget widget_text">
+							<h1 class="widget-title section-title"><span>About Coldbot</span></h1>
+							<div class="textwidget">
+								<p>
+									Our subscription service ships coffee to you on the same day it was roasted. Our coffee is selected and roasted with the cold brewing process in mind. 
+								</p>
+							</div>
+							</aside><aside id="recent-posts-3" class="widget widget_recent_entries">
+							<h1 class="widget-title section-title"><span>Latest Posts</span></h1>
+							<ul>
+								<li>
+								<a href="#">Lorem ipsum.</a>
+								</li>
+								<li>
+								<a href="#">Lorem ipsum.</a>
+								</li>
+								<li>
+								<a href="#">Lorem ipsum.</a>
+								</li>
+								<li>
+								<a href="#">Lorem ipsum.</a>
+								</li>
+								<li>
+								<a href="#">Lorem ipsum.</a>
+								</li>
+							</ul>
+							</aside>
+						</div>
+					</div> -->
+					<!-- SIDEBAR ENDS -->
+					
+				</div>				
+			</div>
+		</div>		
+		
+		<!-- CALL TO ACTION
+		================================================== -->
+		<div class="actionbeforefooter text-center">
+			<div class="container">
+				<span><i class="fa fa-coffee"></i> Our subscription service ships coffee to you on the same day it was roasted. Our coffee is selected and roasted with the cold brewing process in mind.  </span>
+				<a target="_blank" class="actionbutton" href="#">Buy Now </a>
+			</div>
+		</div>
+		
+		<!-- FOOTER
+		================================================== -->		
+		<footer class="themefooter section">
+		<div class="container">
+			<div class="section-inner row">
+				<!-- /footer-a -->
+				<div class="column column-1 col-md-4 rightbd">
+					<div class="widgets">
+						<div class="widget widget_text">
+							<div class="widget-content">
+								<h3 class="widget-title">About Coldbot Coffee</h3>
+								<div class="textwidget">
+									Our subscription service ships coffee to you on the same day it was roasted. Our coffee is selected and roasted with the cold brewing process in mind. 
+								</div>
+							</div>
+							<div class="clear">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /footer-b -->
+				<div class="column column-1 col-md-4 rightbd">
+					<div class="widgets">
+						<div class="widget widget_wysija">
+							<div class="widget-content">
+								<h3 class="widget-title">Subscribe to our Newsletter</h3>
+								<div class="widget_wysija_cont">
+									<form class="widget_wysija">
+										 
+										<p class="wysija-paragraph">
+											<label>Email <span class="wysija-required">*</span></label>
+											<input type="text" name="" class="wysija-input validate[required,custom[email]]" title="Email" value=""/>
+										</p>
+										<input class="wysija-submit wysija-submit-field" type="submit" value="Subscribe!"/>
+									</form>
+								</div>
+							</div>
+							<div class="clear">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /footer-c -->				
+				<div class="column column-1 col-md-4">
+					<div class="widgets">
+						<div class="widget widget_edd_categories_tags_widget">
+							<div class="widget-content">
+								<h3 class="widget-title">Shop Categories</h3>
+								<ul class="edd-taxonomy-widget">
+									<li><a href="#">Banners</a></li>
+									<li><a href="#">Graphics</a></li>
+									<li><a href="#">Logos</a></li>
+									<li><a href="#">Photoes</a></li>
+									<li><a href="#">Vintage</a></li>
+								</ul>
+							</div>
+							<div class="clear">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear">
+				</div>
+			</div>
+		</div>
+		<!-- /copyright -->
+		<div class="sectioncredits">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<span class="credits-left fleft">
+						2015 &copy; All rights Reserved Coldbot Coffee </span>
+						<ul class="footermenu fright">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="shop.html">Shop</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="myaccount.html">My Account</a></li>
+						</ul>
+					</div>
+					<div class="clear">
+					</div>
+				</div>
+			</div>
+		</div>
+		</footer>
+		
+{% endblock %}
