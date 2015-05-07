@@ -129,7 +129,15 @@ site.init({
   afterInit: function(callback) {
     // We're going to do a special console message now that the
     // server has started. Are we in development or production?
-    var locals = require('./data/local');
+    var nodeEnv = process.env.NODE_ENV || 'development';
+
+    var locals;
+    if (nodeEnv === 'production') {
+      locals = require('./data/production');
+    } else {
+      locals = require('./data/local');
+    }
+
     if(locals.development || !locals.minify) {
       console.error('Apostrophe Sandbox is running in development.');
     } else {

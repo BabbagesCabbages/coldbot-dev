@@ -45,7 +45,7 @@ module.exports = {
   },
 
   // Set to true for full CSS and JS minify, on staging and production servers
-  minify: false,
+  minify: true,
   // If these are your db settings then you don't need to be explicit. If not
   // you can uncomment this and get more specific.
   db: {
