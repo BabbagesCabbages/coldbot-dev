@@ -1,9 +1,10 @@
 /* jshint node:true */
 var fs = require('fs');
+var _ = require('lodash');
 
 var site = require('apostrophe-site')();
 
-site.init({
+var config = {
 
   // This line is required and allows apostrophe-site to use require() and manage our NPM modules for us.
   root: module,
@@ -140,4 +141,18 @@ site.init({
     callback(null);
   }
 
-});
+};
+
+if (process.env.NODE_ENV === 'production') {
+  _.extend(config, {
+    uploadfs: {
+      backend: 's3',
+      secret: process.env.AWS_SECRET,
+      key: process.env.AWS_KEY,
+      bucket: process.env.S3_BUCKET_NAME,
+      region: process.env.S3_REGION
+    }
+  });
+}
+
+site.init(config);
