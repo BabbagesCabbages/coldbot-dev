@@ -1,9 +1,10 @@
 /* jshint node:true */
 var fs = require('fs');
+var _ = require('lodash');
 
 var site = require('apostrophe-site')();
 
-site.init({
+var config = {
 
   // This line is required and allows apostrophe-site to use require() and manage our NPM modules for us.
   root: module,
@@ -123,13 +124,14 @@ site.init({
   // while stylesheets contains the names of LESS files in /public/css
   assets: {
     stylesheets: ['site'],
-    scripts: ['_site-compiled', 'vendor/bootstrap-switch','vendor/checkbox','vendor/html5shiv','vendor/imagesloaded','vendor/init','vendor/isotope','vendor/isotope.min','vendor/main','vendor/masonry','vendor/modernizr-2.8.3.min','vendor/radio','vendor/smoothScroll','vendor/switch','vendor/toolbar']
+    scripts: ['_site-compiled', 'vendor/anim', 'vendor/bootstrap-switch','vendor/checkbox','vendor/html5shiv','vendor/imagesloaded','vendor/init','vendor/isotope','vendor/isotope.min','vendor/main','vendor/masonry','vendor/modernizr-2.8.3.min','vendor/radio','vendor/smoothScroll','vendor/switch','vendor/toolbar']
   },
 
   afterInit: function(callback) {
     // We're going to do a special console message now that the
     // server has started. Are we in development or production?
     var locals = require('./data/local');
+
     if(locals.development || !locals.minify) {
       console.error('Apostrophe Sandbox is running in development.');
     } else {
@@ -139,4 +141,18 @@ site.init({
     callback(null);
   }
 
-});
+};
+
+if (process.env.NODE_ENV === 'production') {
+  _.extend(config, {
+    uploadfs: {
+      backend: 's3',
+      secret: process.env.AWS_SECRET,
+      key: process.env.AWS_KEY,
+      bucket: process.env.S3_BUCKET_NAME,
+      region: process.env.S3_REGION
+    }
+  });
+}
+
+site.init(config);
