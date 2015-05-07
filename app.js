@@ -129,8 +129,6 @@ site.init({
   afterInit: function(callback) {
     // We're going to do a special console message now that the
     // server has started. Are we in development or production?
-    var nodeEnv = process.env.NODE_ENV || 'development';
-
     var locals = require('./data/local');
 
     if(locals.development || !locals.minify) {
