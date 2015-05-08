@@ -48,7 +48,8 @@ var config = {
       { name: 'default', label: 'Default Page' },
       { name: 'home', label: 'Home Page' },
       { name: 'blogy', label: 'Blog Main' },
-      { name: 'blogview', label: 'Blog View' }
+      { name: 'blogview', label: 'Blog View' },
+      { name: 'blog', label: 'Blog' }
     ]
   },
 
