@@ -1,35 +1,43 @@
 {%- macro renderBlogListings(pieces, options) -%}
   {%- if pieces -%}
-    <ul class="blog-listings">
-      {%- for piece in pieces -%}
-        {{ renderBlogListing(piece) }}
-      {%- endfor -%}
-    </ul>
+    {%- for piece in pieces -%}
+      {{ renderBlogListing(piece) }}
+    {%- endfor -%}
   {%- else -%}
     <h2>{{ __('There are no blog posts yet.') }}</h2>
   {%- endif -%}
 {%- endmacro -%}
 
 {%- macro renderBlogListing(piece) -%}
-  {% set image = aposAreaImage(piece, 'image') %}
-  <li class="column width-100 demo-blog-listing">
-    <div class="column width-33 blog-listing-image">
-      <div class="blog-card-head" {% if image %}style="background-image:url({{ aposFilePath(image, { size: 'one-half' }) }})"{% endif %}>
+
+  <div class="wowitembox element-item {%- if piece.tags -%}{{ " " + piece.tags[0] }}{%- endif -%}"
+      data-category="{%- if piece.tags -%}{{ piece.tags[0] }}{%- endif -%}">
+    <div class="wowitemboxinner">
+      <div class="imagearea">
+        {% set image = aposAreaImage(piece, 'thumbnail') or aposAreaImage(piece, 'body') %}
+
         {%- if image -%}
-          <img src="{{ aposFilePath(image, { size: 'one-half' }) }}">
+          <img width="555" height="370" src="{{ aposFilePath(image, { size: 'one-half' }) }}" class="attachment-post-thumbnail wp-post-image" alt="124_1"/>
         {%- endif -%}
+        <div class="caption">
+          <div class="blur">
+          </div>
+          <div class="caption-text">
+            <div class="captionbuttons">
+              <a href="{{ piece.slug }}" class="captiondetails"><i class="fa fa-link"></i> more...</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <span class="sticker sticker--overlap">{{ piece.publishedAt | date('MMM DD, YYYY' ) }}</span>
-    </div>{#
-      #}<div class="column width-66 blog-listing-info">
-      <h5 class="blog-listing-title"><a href="{{ piece.url }}">{{ piece.title | e }}</a></h5>
-      {% if piece.authorId %}
-        <h6 class="blog-listing-author">by {{ piece._author.title }}</h6>
-      {% endif %}
-      <div class="blog-listing-excerpt">{{ aposAreaPlaintext(piece, 'body', { truncate: 200 }) }}</div>
-      <a href="{{ piece.slug }}" alt="Read More">Read More</a>
+      <div class="notesarea">
+        <a href="{{ piece.slug }}">
+          <h2>{{ piece.title }}</h2>
+        </a>
+        <span class="description">{{ aposAreaPlaintext(piece, 'body', { truncate: 200 }) }}</span>
+      </div>
     </div>
-  </li>
+    <!-- .wowitemboxinner-->
+  </div>
 {%- endmacro -%}
 
 {%- macro blogCard(piece) -%}
