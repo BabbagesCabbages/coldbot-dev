@@ -57,11 +57,16 @@
                 <div class="wrapindexcerpt">
                   <div class="contenttext">
                     <div class="post-content">
-                      <img width="555" height="370" src="images/coffee4.jpg" class="attachment-post-thumbnail wp-post-image" alt=""/>
                        {{ aposSingleton(page._author, 'thumbnail', 'slideshow', { noHeight: true, edit: false}
                         ) }}
                       <h2 class="post-title">
-                      <a style="color:#333;" href="#">Lorem ipsum dolor sit amet.</a>
+                      <a style="color:#333;" href="#">{{ aposSingleton(page, 'body', {
+          controls: ['style', 'bold', 'italic', 'createLink', 'unlink'],
+          styles: [
+            { value: 'h2', label: 'Heading' }
+          ],
+          lockups: ['left', 'right']
+        }) }}</a>
                       </h2>
                       <div class="clearfix">
                       </div>
