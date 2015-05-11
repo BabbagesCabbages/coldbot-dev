@@ -1,0 +1,51 @@
+<div class="col-md-9">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+    <div class="wrapindexcerpt">
+      <div class="contenttext">
+        <div class="post-content">
+          {{ aposSingleton(page._author, 'thumbnail', 'slideshow', { noHeight: true, edit: false}
+          ) }}
+          <h2 class="post-title">
+            <a style="color:#333;" href="#">{{ aposSingleton(page, 'body', {
+              controls: ['style', 'bold', 'italic', 'createLink', 'unlink'],
+              styles: [
+              { value: 'h2', label: 'Heading' }
+              ],
+              lockups: ['left', 'right']
+              }) }}</a>
+          </h2>
+          <div class="clearfix">
+          </div>
+          <div class="wowmetaposts entry-meta">
+            <span class="wowmetadate"><i class="fa fa-clock-o"></i> 26/07/2014</span>
+            <span class="wowmetaauthor"><i class="fa fa-user"></i> <a href="#">John Doe</a></span>
+            <span class="wowmetacats"><i class="fa fa-folder-open"></i> &nbsp;<a href="#"> media</a></span>
+            <span class="wowmetacommentnumber"><i class="fa fa-comments"></i> <a href="#respond">Leave a Comment</a></span>
+          </div>
+          <!-- .wowmetaposts -->
+
+          {{ aposArea(page, 'body', {
+          controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
+          styles: [
+          { value: 'p', label: 'Text' },
+          { value: 'h2', label: 'Heading' },
+          { value: 'h4', label: 'Subheading' },
+          { value: 'code', label: 'Code' }
+          ],
+          lockups: ['left', 'right']
+          }) }}<div class="wowitemboxlist isotope">
+
+            <div class="tagcloud">
+              <a href="#">embeds</a> <a href="#" rel="tag">ecommerce</a> <a href="#" rel="tag">story</a> <a href="#" rel="tag">marketing</a>
+            </div>
+          </div>
+          <div class="clearfix">
+          </div>
+        </div>
+      </div>
+
+      </main>
+    </div>
+  </div>
+  <!-- MAIN CONTENT ENDS -->

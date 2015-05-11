@@ -5,7 +5,7 @@
 
 {# Article specific title tag, for Facebook, SEO, etc. #}
 {%- block title -%}
-  {{ siteTitle }} &ndash; {{ page.title | e }}
+{{ siteTitle }} &ndash; {{ page.title | e }}
 {%- endblock -%}
 
 {% block headerContent %}{% endblock %}
@@ -15,138 +15,100 @@
 {% set firstImage = aposAreaImage(page, 'image') %}
 
 {% block extraHead %}
-  {% if firstImage %}
-    <meta property="og:image" content="{{ aposFilePath(firstImage) }}" />
-  {% endif %}
+{% if firstImage %}
+<meta property="og:image" content="{{ aposFilePath(firstImage) }}" />
+{% endif %}
 {% endblock %}
 
 {% block mainContent %}
 
-  <div class="boxedlayout">
-{{ nav(page, {classes: 'hide-mobile'}) }}
-    <!-- PAGE CONTENT
-    ================================================== -->
-    <div class="templateblog">
-    
-      <!-- TITLE BEGINS -->
-      <div class="headerimage" style="background-image: url(images/coffebg1.jpg);margin-top: 51px;">
-        <div class="headercontent">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="fleft">
-                  <h1>test</h1>
-                </div>
-                <div class="fright breadc">
-                  <a href="#"> Home </a> / <a href="blog.html">Blog</a> / Coldbot
-                </div>
+<div class="boxedlayout">
+  {{ nav(page, {classes: 'hide-mobile'}) }}
+
+  <!-- PAGE CONTENT ================================================== -->
+  <div class="templateblog">
+
+    <!-- TITLE BEGINS -->
+    <div class="headerimage" style="background-image: url(images/coffebg1.jpg);margin-top: 51px;">
+      <div class="headercontent">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="fleft">
+                <h1>test</h1>
+              </div>
+              <div class="fright breadc">
+                <a href="#"> Home </a> / <a href="blog.html">Blog</a> / Coldbot
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- TITLE ENDS -->
-      
-      <div class="container padtop50 padbot40">
-        <div class="row">
-        
-          <!-- MAIN CONTENT BEGINS -->
-          <div class="col-md-9">
-            <div id="primary" class="content-area">
-              <main id="main" class="site-main" role="main">
-                <div class="wrapindexcerpt">
-                  <div class="contenttext">
-                    <div class="post-content">
-                       {{ aposSingleton(page._author, 'thumbnail', 'slideshow', { noHeight: true, edit: false}
-                        ) }}
-                      <h2 class="post-title">
-                      <a style="color:#333;" href="#">{{ aposSingleton(page, 'body', {
-          controls: ['style', 'bold', 'italic', 'createLink', 'unlink'],
-          styles: [
-            { value: 'h2', label: 'Heading' }
-          ],
-          lockups: ['left', 'right']
-        }) }}</a>
-                      </h2>
-                      <div class="clearfix">
-                      </div>
-                      <div class="wowmetaposts entry-meta">
-                        <span class="wowmetadate"><i class="fa fa-clock-o"></i> 26/07/2014</span>
-                        <span class="wowmetaauthor"><i class="fa fa-user"></i> <a href="#">John Doe</a></span>
-                        <span class="wowmetacats"><i class="fa fa-folder-open"></i> &nbsp;<a href="#"> media</a></span>
-                        <span class="wowmetacommentnumber"><i class="fa fa-comments"></i> <a href="#respond">Leave a Comment</a></span>
-                      </div>
-                      <!-- .wowmetaposts -->
-                      
-                       {{ aposArea(page, 'body', {
-          controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
-          styles: [
-            { value: 'p', label: 'Text' },
-            { value: 'h2', label: 'Heading' },
-            { value: 'h4', label: 'Subheading' },
-            { value: 'code', label: 'Code' }
-          ],
-          lockups: ['left', 'right']
-        }) }}<div class="wowitemboxlist isotope">
-                    
-                      <div class="tagcloud">
-                        <a href="#">embeds</a> <a href="#" rel="tag">ecommerce</a> <a href="#" rel="tag">story</a> <a href="#" rel="tag">marketing</a>
-                      </div>
-                    </div>
-                    <div class="clearfix">
-                    </div>
-                  </div>
-                </div>
-                
-              </main>
-            </div>
-          </div>
-          <!-- MAIN CONTENT ENDS -->
-          
+    </div>
+    <!-- TITLE ENDS -->
+
+    <div class="container padtop50 padbot40">
+      <div class="row">
+
+        <!-- MAIN CONTENT BEGINS -->
+        {% if page.tags.length > 0 %}
+          {% if page.tags[0].toLowerCase() == 'recipes' %}
+            {%- include "recipesShow.html" -%}
+          {% elif page.tags[0].toLowerCase() == 'product-reviews' %}
+            {%- include "productReviewsShow.html" -%}
+          {% elif page.tags[0].toLowerCase() == 'brewing-guides' %}
+            {%- include "brewingGuidesShow.html" -%}
+          {% else %}
+            {%- include "defaultShow.html" -%}
+          {% endif %}
+        {% else %}
+          {%- include "defaultShow.html" -%}
+        {% endif %}
+
           <!-- SIDEBAR BEGINS -->
           <div class="col-md-3">
             <div id="secondary" class="widget-area" role="complementary">
               <aside id="search-3" class="widget widget_search">
-              <h1 class="widget-title section-title"><span>Search in Blog</span></h1>
-              <form role="search" method="get" class="search-form" action="#">
-                <input type="search" class="search-field" placeholder="Type and hit enter..." value="" name="s" title=""/>
-                <input type="hidden" name="post_type" value="post"/>
-              </form>
+                <h1 class="widget-title section-title"><span>Search in Blog</span></h1>
+                <form role="search" method="get" class="search-form" action="#">
+                  <input type="search" class="search-field" placeholder="Type and hit enter..." value="" name="s" title=""/>
+                  <input type="hidden" name="post_type" value="post"/>
+                </form>
               </aside><aside id="text-2" class="widget widget_text">
-              <h1 class="widget-title section-title"><span>About Coldbot</span></h1>
-              <div class="textwidget">
-                <p>
+                <h1 class="widget-title section-title"><span>About Coldbot</span></h1>
+                <div class="textwidget">
+                  <p>
                   Our subscription service ships coffee to you on the same day it was roasted. Our coffee is selected and roasted with the cold brewing process in mind. 
-                </p>
-              </div>
+                  </p>
+                </div>
               </aside><aside id="recent-posts-3" class="widget widget_recent_entries">
-              <h1 class="widget-title section-title"><span>Latest Posts</span></h1>
-              <ul>
-                <li>
-                <a href="#">Embed Audio</a>
-                </li>
-                <li>
-                <a href="#">Image Alignement</a>
-                </li>
-                <li>
-                <a href="#">Embed Videos</a>
-                </li>
-                <li>
-                <a href="#">Text Alignement</a>
-                </li>
-                <li>
-                <a href="#">HTML Tags and Formatting</a>
-                </li>
-              </ul>
+                <h1 class="widget-title section-title"><span>Latest Posts</span></h1>
+                <ul>
+                  <li>
+                  <a href="#">Embed Audio</a>
+                  </li>
+                  <li>
+                  <a href="#">Image Alignement</a>
+                  </li>
+                  <li>
+                  <a href="#">Embed Videos</a>
+                  </li>
+                  <li>
+                  <a href="#">Text Alignement</a>
+                  </li>
+                  <li>
+                  <a href="#">HTML Tags and Formatting</a>
+                  </li>
+                </ul>
               </aside>
             </div>
           </div>
           <!-- SIDEBAR ENDS -->         
-          
+
         </div>        
       </div>
     </div>    
-    
+
     <!-- CALL TO ACTION
     ================================================== -->
     <div class="actionbeforefooter text-center">
@@ -155,10 +117,10 @@
         <a target="_blank" class="actionbutton" href="#">Buy Now </a>
       </div>
     </div>
-    
+
     <!-- FOOTER
     ================================================== -->    
-    
 
 
-{% endblock %}
+
+    {% endblock %}
