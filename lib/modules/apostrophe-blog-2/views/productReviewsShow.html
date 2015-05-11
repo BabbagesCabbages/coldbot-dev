@@ -37,7 +37,9 @@
           }) }}<div class="wowitemboxlist isotope">
 
             <div class="tagcloud">
-              <a href="#">embeds</a> <a href="#" rel="tag">ecommerce</a> <a href="#" rel="tag">story</a> <a href="#" rel="tag">marketing</a>
+              {% for tag in page.tags %}
+                <a href="#">{{ tag }}</a>
+              {% endfor %}
             </div>
           </div>
           <div class="clearfix">
