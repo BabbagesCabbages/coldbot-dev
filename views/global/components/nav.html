@@ -1,44 +1,45 @@
 {% macro nav(page, options) %}
 
 
-    <!-- HEADER
+<!-- HEADER
     ================================================== -->
 <nav class="navbar navbar-custom navbar-fixed-top{% if options.classes%} {{options.classes}}{% endif%} " role="navigation" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <div class="header">
-                    <a href="/"><img style="height: 60px;padding: 10px;" src="images/logo.png" alt=""></a>
-                </div>
-            </div>
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="header">
+        <a href="/"><img style="height: 60px;padding: 10px;" src="/images/logo.png" alt=""></a>
+      </div>
+    </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul id="links" class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="nav-item">
-				{% if not page.ancestors.length %}
-					<a href="/" class="active">{{ page.title }}</a>
-				{% else %}
-				<a href="{{ page.ancestors[0].url }}" {% if page.slug == '/' %}class="active"{% endif %}>{{ page.ancestors[0].title }}</a>
-	  			{% endif %}
-	  			</li>
-				{% for item in page.tabs %}
-			      <li class="nav-item">
-			        <a href="{{ item.url }}" {% if page.slug == item.slug %}class="active"{% endif %}>{{ item.title }}</a>
-			      </li>
-			    {% endfor %}
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul id="links" class="nav navbar-nav">
+        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+        <li class="hidden">
+        <a href="#page-top"></a>
+        </li>
+        <li class="nav-item">
+        {% if not page.ancestors.length %}
+        <a href="/" class="active">{{ page.title }}</a>
+        {% else %}
+        <a href="{{ page.ancestors[0].url }}" {% if page.slug == '/' %}class="active"{% endif %}>{{ page.ancestors[0].title }}</a>
+        {% endif %}
+        </li>
+        {% for item in page.tabs %}
+        <li class="nav-item">
+        <a href="{{ item.url }}" {% if page.slug == item.slug %}class="active"{% endif %}>{{ item.title }}</a>
+        </li>
+        {% endfor %}
 
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        
-        <!-- /.container -->
-    </nav>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+
+    <!-- /.container -->
+  </div>
+</nav>
 
 {% endmacro %}
