@@ -2,7 +2,7 @@
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
     <div class="wrapindexcerpt">
-      <div class="contenttext">
+      <div id="brew" class="contenttext">
         <div class="post-content">
           {{ aposSingleton(page._author, 'thumbnail', 'slideshow', { noHeight: true, edit: false}
           ) }}
@@ -24,14 +24,41 @@
             <span class="wowmetacommentnumber"><i class="fa fa-comments"></i> <a href="#respond">Leave a Comment</a></span>
           </div>
           <!-- .wowmetaposts -->
-
-          {{ aposArea(page, 'body', {
+         <div class="row">
+           <div class="col-md-4 no-pad">
+             {{ aposArea(page, 'bodyimagesbrewing1', {
+          controls: ['style','slideshow', 'video'],
+          styles: [
+          { value: 'h4', label: 'header' }
+          ],
+          lockups: ['left', 'right']
+          }) }}
+           </div>
+           <div class="col-md-4 no-pad">
+             {{ aposArea(page, 'bodyimagesbrewing2', {
+          controls: ['style','slideshow', 'video'],
+          styles: [
+          { value: 'h4', label: 'header' }
+          ],
+          lockups: ['left', 'right']
+          }) }}
+           </div>
+           <div class="col-md-4 no-pad">
+             {{ aposArea(page, 'bodyimagesbrewing3', {
+          controls: ['style','slideshow', 'video'],
+          styles: [
+          { value: 'h4', label: 'header' }
+          ],
+          lockups: ['left', 'right']
+          }) }}
+           </div>
+         </div>
+          
+          {{ aposArea(page, 'bodybrewingstext', {
           controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
           styles: [
           { value: 'p', label: 'Text' },
-          { value: 'h2', label: 'Heading' },
-          { value: 'h4', label: 'Subheading' },
-          { value: 'code', label: 'Code' }
+          { value: 'h2', label: 'Headings' }
           ],
           lockups: ['left', 'right']
           }) }}<div class="wowitemboxlist isotope">
