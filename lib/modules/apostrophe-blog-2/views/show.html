@@ -38,7 +38,7 @@
                 <h1> {{ page.title | e }}</h1>
               </div>
               <div class="fright breadc">
-                <a href="#"> Home </a> / <a href="blog.html">Blog</a> / Coldbot
+               <!--  <a href="#"> Home </a> / <a href="blog.html">Blog</a> / Coldbot -->
               </div>
             </div>
           </div>
@@ -66,38 +66,35 @@
         {% endif %}
 
           <!-- SIDEBAR BEGINS -->
-          <div class="col-md-3">
+          <div style="margin-top:2em;" class="col-md-3">
             <div id="secondary" class="widget-area" role="complementary">
-              <aside id="search-3" class="widget widget_search">
-                <h1 class="widget-title section-title"><span>Search in Blog</span></h1>
-                <form role="search" method="get" class="search-form" action="#">
-                  <input type="search" class="search-field" placeholder="Type and hit enter..." value="" name="s" title=""/>
-                  <input type="hidden" name="post_type" value="post"/>
-                </form>
-              </aside><aside id="text-2" class="widget widget_text">
-                <h1 class="widget-title section-title"><span>About Coldbot</span></h1>
+              <aside id="text-2" class="widget widget_text">
+                <h1 class="widget-title section-title"><span>Featured Items</span></h1>
                 <div class="textwidget">
-                  <p>
-                  Our subscription service ships coffee to you on the same day it was roasted. Our coffee is selected and roasted with the cold brewing process in mind. 
-                  </p>
+                  <ul>
+                    <li>one</li>
+                    <li>two</li>
+                    <li>three</li>
+                    <li>four</li>
+                  </ul>
                 </div>
               </aside><aside id="recent-posts-3" class="widget widget_recent_entries">
-                <h1 class="widget-title section-title"><span>Latest Posts</span></h1>
+                <h1 class="widget-title section-title"><span>You might like...</span></h1>
                 <ul>
                   <li>
-                  <a href="#">Embed Audio</a>
+                  <a href="#">Coffee stuff 1</a>
                   </li>
                   <li>
-                  <a href="#">Image Alignement</a>
+                  <a href="#">Coffee stuff 2</a>
                   </li>
                   <li>
-                  <a href="#">Embed Videos</a>
+                  <a href="#">Coffee stuff 3</a>
                   </li>
                   <li>
-                  <a href="#">Text Alignement</a>
+                  <a href="#">Coffee stuff 4</a>
                   </li>
                   <li>
-                  <a href="#">HTML Tags and Formatting</a>
+                  <a href="#">Coffee stuff 5</a>
                   </li>
                 </ul>
               </aside>
@@ -111,12 +108,13 @@
 
     <!-- CALL TO ACTION
     ================================================== -->
-    <div class="actionbeforefooter text-center">
+<div class="actionbeforefooter text-center bg">
   <div class="container">
+  <div class="overlay"></div>
+  <h2 class="fresh-coffee">Subscribe to our newsletter</h2>
   <i style="margin-bottom: .6em;" class="fa fa-coffee fa-2x"></i> <br>
-  <h2 class="fresh-coffee">Fresh Coffee Delivered Right to Your Doorstep</h2>
-    <span>Our subscription service ships coffee to you on the same day it was roasted<br> The coffee is selected and roasted with the cold brewing process in mind.<br><br><span class="text-size">Start truly enjoying your coffee<br>
-    <a target="_blank" class="actionbutton" href="#">View Coffee</a>
+    <span> Stay up to date with all the coffee we're releasing<br> Get notified when we add new coffee, recipes, product reviews, and brewing guides.  <br><br><span class="text-size">It's easy, sign up now<br>
+    <a style="background-color:white;color:rgb(21,21,21);" target="_blank" class="actionbutton" href="#">Sign Up</a>
   </div>
 </div>
 
