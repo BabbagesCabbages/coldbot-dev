@@ -7,7 +7,7 @@
           {{ aposSingleton(page._author, 'thumbnail', 'slideshow', { noHeight: true, edit: false}
           ) }}
           <h2 class="post-title">
-            <a style="color:#333;" href="#">{{ aposSingleton(page, 'body', {
+            <a style="color:#333;" href="#">{{ aposArea(page, 'bodyrecipe', {
               controls: ['style', 'bold', 'italic', 'createLink', 'unlink'],
               styles: [
               { value: 'h2', label: 'Heading' }
@@ -35,7 +35,7 @@
           }) }}
           </div>
           <div class="col-md-6">
-            {{ aposArea(page, 'recipestuff', {
+            {{ aposArea(page, 'bodyrecipe2', {
           controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
           styles: [
           { value: 'h4', label: 'cursive' }
@@ -46,7 +46,7 @@
           </div>
           <div class="row">
             <div class="col-md-12">
-              {{ aposArea(page, 'content1', {
+              {{ aposArea(page, 'bodyrecipe3', {
               controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
               styles: [
                 { value: 'h2', label: 'Heading' },

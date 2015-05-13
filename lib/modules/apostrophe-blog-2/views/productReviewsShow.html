@@ -7,7 +7,7 @@
           {{ aposSingleton(page._author, 'thumbnail', 'slideshow', { noHeight: true, edit: false}
           ) }}
           <h2 class="post-title">
-            <a style="color:#333;" href="#">{{ aposSingleton(page, 'body', {
+            <a style="color:#333;" href="#">{{ aposArea(page, 'bodyproduct', {
               controls: ['style', 'bold', 'italic', 'createLink', 'unlink'],
               styles: [
               { value: 'h2', label: 'Heading' }
@@ -19,7 +19,7 @@
           </div>
           <div class="wowmetaposts entry-meta">
             <span class="wowmetadate"><i class="fa fa-clock-o"></i> 26/07/2014</span>
-            <span class="wowmetaauthor"><i class="fa fa-user"></i> <a href="#">John Doe</a></span>
+            <span class="wowmetaauthor"><i class="fa fa-user"></i> <a href="#">{{page._author}}</a></span>
             <span class="wowmetacats"><i class="fa fa-folder-open"></i> &nbsp;<a href="#"> media</a></span>
             <span class="wowmetacommentnumber"><i class="fa fa-comments"></i> <a href="#respond">Leave a Comment</a></span>
           </div>

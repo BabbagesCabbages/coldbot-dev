@@ -7,7 +7,7 @@
           {{ aposSingleton(page._author, 'thumbnail', 'slideshow', { noHeight: true, edit: false}
           ) }}
           <h2 class="post-title">
-            <a style="color:#333;" href="#">{{ aposSingleton(page, 'body', {
+            <a style="color:#333;" href="#">{{ aposArea(page, 'bodybrew', {
               controls: ['style', 'bold', 'italic', 'createLink', 'unlink'],
               styles: [
               { value: 'h2', label: 'Heading' }
@@ -26,7 +26,7 @@
           <!-- .wowmetaposts -->
          <div class="row">
            <div class="col-md-4 no-pad">
-             {{ aposArea(page, 'bodyimagesbrewing1', {
+             {{ aposArea(page, 'bodybrew1', {
           controls: ['style','slideshow', 'video'],
           styles: [
           { value: 'h4', label: 'header' }
@@ -35,7 +35,7 @@
           }) }}
            </div>
            <div class="col-md-4 no-pad">
-             {{ aposArea(page, 'bodyimagesbrewing2', {
+             {{ aposArea(page, 'bodybrew2', {
           controls: ['style','slideshow', 'video'],
           styles: [
           { value: 'h4', label: 'header' }
@@ -44,7 +44,7 @@
           }) }}
            </div>
            <div class="col-md-4 no-pad">
-             {{ aposArea(page, 'bodyimagesbrewing3', {
+             {{ aposArea(page, 'bodybrew3', {
           controls: ['style','slideshow', 'video'],
           styles: [
           { value: 'h4', label: 'header' }
@@ -54,7 +54,7 @@
            </div>
          </div>
           
-          {{ aposArea(page, 'bodybrewingstext', {
+          {{ aposArea(page, 'body', {
           controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
           styles: [
           { value: 'p', label: 'Text' },
