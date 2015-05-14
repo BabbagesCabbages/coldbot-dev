@@ -53,15 +53,29 @@
           }) }}
            </div>
          </div>
-          
-          {{ aposArea(page, 'body', {
+          <div class="row">
+            <div class="col-md-6">
+              {{ aposArea(page, 'body', {
           controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
           styles: [
           { value: 'p', label: 'Text' },
           { value: 'h2', label: 'Headings' }
           ],
           lockups: ['left', 'right']
-          }) }}<div class="wowitemboxlist isotope">
+          }) }}
+            </div>
+            <div class="col-md-6">
+              {{ aposArea(page, 'bodytext', {
+          controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
+          styles: [
+          { value: 'p', label: 'Text' },
+          { value: 'h2', label: 'Headings' }
+          ],
+          lockups: ['left', 'right']
+          }) }}
+            </div>
+          </div>
+          <div class="wowitemboxlist isotope">
 
             <div class="tagcloud">
               {% for tag in page.tags %}
