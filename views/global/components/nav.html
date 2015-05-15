@@ -3,6 +3,15 @@
 
 <!-- HEADER
     ================================================== -->
+    <script>
+                // build scene
+                var scene = new ScrollMagic.Scene({
+                                    triggerElement: "#trigger1"
+                                })
+                                .setTween("#animate1", 1.0, {display:"inline-block", scale: 2.0}) // trigger a TweenMax.to tween
+                                .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+                                .addTo(controller);
+        </script>
 <nav class="navbar navbar-custom navbar-fixed-top{% if options.classes%} {{options.classes}}{% endif%} " role="navigation" role="navigation">
         <div class="container">
             <div style="padding-left: 35px;" class="navbar-header">
@@ -18,9 +27,13 @@
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul id="links" class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <!-- <li id="animate1" class="nav-item">
+                        <a href="">Recipe</a>
+                    </li> -->
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
+                    
                     <li class="nav-item">
 				{% if not page.ancestors.length %}
 					<!-- <a href="/" class="active">{{ page.title }}</a> -->

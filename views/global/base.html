@@ -51,6 +51,10 @@
   {# so we're rendering an inner layout then passing the results to an outer one. #}
   {# We also pull out bodyClass as a special case and pass it in here. #}
   <body class="{{ bodyClass }} {% if user %}logged-in{% else %}logged-out{% endif %}">
+  <script>
+      // init controller
+      var controller = new ScrollMagic.Controller();
+    </script>
     {% block beforeBody %}
     {% endblock %}
 
@@ -216,5 +220,7 @@ var x = document.getElementsByTagName('script')[0];
 x.parentNode.insertBefore(s, x);
 })();
 </script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+
   </body>
 </html>

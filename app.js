@@ -128,7 +128,7 @@ var config = {
   // while stylesheets contains the names of LESS files in /public/css
   assets: {
     stylesheets: ['site'],
-    scripts: ['_site-compiled', 'vendor/anim', 'vendor/bootstrap-switch','vendor/checkbox','vendor/html5shiv','vendor/imagesloaded','vendor/init','vendor/isotope','vendor/isotope.min','vendor/main','vendor/masonry','vendor/modernizr-2.8.3.min','vendor/radio','vendor/smoothScroll','vendor/switch','vendor/toolbar']
+    scripts: ['_site-compiled','vendor/highlight', 'vendor/reveal', 'vendor/gsap','vendor/tween', 'vendor/anim', 'vendor/bootstrap-switch','vendor/checkbox','vendor/html5shiv','vendor/imagesloaded','vendor/init','vendor/isotope','vendor/isotope.min','vendor/main','vendor/masonry','vendor/modernizr-2.8.3.min','vendor/radio','vendor/smoothScroll','vendor/switch','vendor/toolbar']
   },
 
   afterInit: function(callback) {
