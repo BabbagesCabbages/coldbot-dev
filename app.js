@@ -83,7 +83,7 @@ var config = {
     'apostrophe-editor-2': {},
     'apostrophe-ui-2': {},
     'apostrophe-blog-2': {
-      perPage: 5,
+      perPage: 100,
       pieces: {
         addFields: [
           {
