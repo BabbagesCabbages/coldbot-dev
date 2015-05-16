@@ -42,9 +42,15 @@
 	  			{% endif %}
 	  			</li>
 				{% for item in page.tabs %}
-			      <li class="nav-item">
-			        <a href="{{ item.url }}" {% if page.slug == item.slug %}class="active"{% endif %}>{{ item.title }}</a>
+			      <li style="border: 1px solid white;margin: 11px;"class="nav-item">
+			        <a style="font-size: 16px;padding: .5em;" href="{{ item.url }}" {% if page.slug == item.slug %}class="active"{% endif %}>{{ item.title }}</a>
 			      </li>
+                  <style>
+                  .nav-item a:hover{
+                    color:black!important;
+                    background-color: white!important;
+                  }
+                  </style>
 			    {% endfor %}
 
 

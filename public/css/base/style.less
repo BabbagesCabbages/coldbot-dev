@@ -1601,7 +1601,7 @@ footer.themefooter .widget-content {
 	clear:both;
 	float:none;
 	position:relative;
-	margin-bottom:60px;
+	margin-bottom:45px;
 	line-height:1.7;
 }
 footer.themefooter a {
@@ -1719,28 +1719,68 @@ ul.footermenu li a:hover {
 	color:#666;
 }
 .actionbeforefooter {
-
-	background-color:rgb(40,40,40);
-  	z-index:2;
-  box-sizing:border-box;
+	background-color:rgb(26, 65, 79);
+  	box-sizing:border-box;
   /*border-bottom: 8px solid white;*/
-  border-image: url("../images/border.png") 6 1 round;
-  border-image-repeat: repeat;
+  /*border-image: url("../images/border.png") 6 1 round;
+    border-image-repeat: repeat;*/
 	color:#fff;
 	padding:30px 0 60px 0;
 	position:relative;
 	z-index:1;
 	font-size:18px;
 	font-weight:300;
+	border-top: 3px dotted white;
+  	border-bottom: 3px dotted white;
 }
 .white-space {
 	content: "";
   height: 2px;
   width: 100%;
-  background-color: black;
+  background-color: rgb(26, 65, 79);
   position: relative;
   top: -1px;
   z-index: 1;
+}
+.dark-space {
+	content: "";
+  height: 50px;
+  width: 100%;
+    position: absolute;
+  top: -56px;
+  z-index: 1;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.3)));
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%);
+background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%);
+background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+}
+.white-space2 {
+	content: "";
+  height: 2px;
+  width: 100%;
+  background-color: rgb(26, 65, 79);
+  position: relative;
+  top: 1px;
+  z-index: 2;
+}
+
+.dark-space2 {
+	content: "";
+	position: absolute;
+  z-index: 2;
+  height: 50px;
+  width: 100%;
+  top:3px;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.3)), color-stop(100%,rgba(0,0,0,0)));
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+background: -o-linear-gradient(top, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+background: -ms-linear-gradient(top, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
 }
 .actionbeforefooter a.actionbutton {
 		border:2px solid rgb(21,21,21);
