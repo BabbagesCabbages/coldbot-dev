@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+{% include 'pageMacros.html' %}
+{% include 'components/_index.html' %}
+{% include 'svg/_index.html' %}
+
+{% block bodyClass %}{{ super() }} about-page{% endblock %}
+
+{# breadcrumbs are excluded from the homepage #}
+{% block breadcrumbs %}
+{% endblock %}
+
+{% block main %}
+   <div class="boxedlayout">
+
+    <!-- HEADER
+    ================================================== -->
+
+    {{ nav(page, {classes: 'hide-mobile'}) }}
+    <!-- PAGE CONTENT
+    ================================================== -->
+    
+    <!-- TITLE BEGINS -->
+ <!--   <style>
+
+    .innerbox {
+      position: absolute;
+  height: 100%!important;
+  width: 100%;
+  border-image-source: url("http://www.smarterwebcompany.co.uk/swc2013-co-uk/_img/border-line-dot.png");
+  z-index: -2;
+  border-image-slice: 31;
+  border-image-width: 18px;
+}
+    </style>-->
+    <div class="headerimage homeimg text-center abouts" style="background: url(images/bg2.jpg)no-repeat scroll center center;
+background-size: cover;">
+      <div class="headercontent home">
+
+        <div style="position:relative;top:30px" class="container">
+       <!--  <div style="top: -20px;" class="innerbox"></div> -->
+          <div class="row">
+            <div class="col-md-12">
+                <h1 style="font-family:'virgo'!important;" class="brand-heading" data-scrollreveal="enter top over 1.9s wait 0.2s">About Us</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+<!--     <div style="background-color:#202020;" class="white-space"> -->
+    </div>
+    <!-- TITLE ENDS -->
+    
+    <!-- MAIN CONTENT BEGINS -->
+    
+      <div class="row no-pad row-eq-height">
+        <div class="col-md-12 no-pad">
+          <div style="margin: 5em 0;"class="row text-center no-pad">
+        <div style="height:330px;  box-shadow: gray 2px 1px 10px;" class="col-lg-3 col-md-offset-1 aboutbg1 no-pad">
+          
+        </div><!-- /.col-lg-4 -->
+        <div style="position:relative" class="col-lg-7">
+        <div style="margin: 0 3em;" class="clear sectionlatestitems text-left">
+            <h2 class="maintitle">About Coldbot Coffee</h2>
+           <!--   <h4 style="margin:4px 0 8em 0">Expand your knowledge and your taste buds</h4> -->
+             <p style="margin-bottom:75px!important;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus velit leo, mollis eget convallis ac, interdum ac risus. Cras sem neque, pharetra at sollicitudin eu, posuere at mi. In pretium cursus turpis, nec ultricies lorem feugiat et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla eu enim ultricies, convallis dui ac, dignissim arcu. Donec cursus nisi vel nulla egestas, sit amet viverra nibh dictum. Ut vel dictum dui. Maecenas congue in tortor ut lacinia.
+
+</p>
+             <div class="row">
+               <div class="col-md-4">
+                 <img class="thumbnail" src="images/coffee3.jpg" alt="">
+               </div>
+               <div class="col-md-4">
+                 <img class="thumbnail" src="images/coffee4.jpg" alt="">
+               </div>
+               <div class="col-md-4">
+                 <img class="thumbnail" src="images/coffee5.jpg" alt="">
+               </div>
+             </div>
+          </div>
+        </div><!-- /.col-lg-4 -->
+      </div>
+          </div>
+          </div>
+          </div>
+          <div class="actionbeforefooter text-center bg">
+  <div class="container">
+  <div class="overlay"></div>
+  <h2 class="fresh-coffee">Subscribe to our newsletter</h2>
+  <i style="margin-bottom: .6em;" class="fa fa-coffee fa-2x"></i> <br>
+    <span> Stay up to date with all the coffee we're releasing.<br> Get notified when we add new coffee, recipes, product reviews, and brewing guides.  <br><br><span class="text-size">It's easy, sign up now<br>
+    <a style="background-color:white;color:rgb(21,21,21);" target="_blank" class="actionbutton" href="#">Sign Up</a>
+  </div>
+</div>
+          <div class="clear">
+          </div>
+
+
+          <div class="clear">
+          </div>
+          <div class="divider1">
+          </div>
+          <!-- .wowitemboxlist-->
+
+    <!-- MAIN CONTENT ENDS -->
+    
+    <!-- FOOTER
+    ================================================== -->
+ 
+
+{% endblock %}
