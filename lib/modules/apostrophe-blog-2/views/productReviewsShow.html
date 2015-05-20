@@ -4,8 +4,8 @@
     <div class="wrapindexcerpt">
       <div id="prod" class="contenttext">
         <div class="post-content">
-          {{ aposSingleton(page._author, 'thumbnail', 'slideshow', { noHeight: true, edit: false}
-          ) }}
+          <!-- {{ aposSingleton(page._author, 'thumbnail', 'slideshow', { noHeight: true, edit: false}
+          ) }} -->
    <!--        <h2 class="post-title">
             <a style="color:#333;" href="#">{{ aposArea(page, 'bodyproduct', {
               controls: ['style', 'bold', 'italic', 'createLink', 'unlink'],
@@ -16,6 +16,82 @@
               }) }}</a>
           </h2> -->
           <div class="clearfix">
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+               {{ aposArea(page, 'bodyoverall', {
+          controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
+          styles: [
+          { value: 'p', label: 'Text' },
+          { value: 'h2', label: 'Heading' },
+          { value: 'h4', label: 'Subheading' },
+          { value: 'code', label: 'Code' }
+          ],
+          lockups: ['left', 'right']
+          }) }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              {{ aposArea(page, 'bodybean1', {
+          controls: ['slideshow', 'video'],
+          styles: [
+          { value: 'p', label: 'Text' },
+          { value: 'h2', label: 'Heading' },
+          { value: 'h4', label: 'Subheading' },
+          { value: 'code', label: 'Code' }
+          ],
+          lockups: ['left', 'right']
+          }) }}
+            </div>
+            <div class="col-md-2">
+              {{ aposArea(page, 'bodybean2', {
+          controls: ['slideshow', 'video'],
+          styles: [
+          { value: 'p', label: 'Text' },
+          { value: 'h2', label: 'Heading' },
+          { value: 'h4', label: 'Subheading' },
+          { value: 'code', label: 'Code' }
+          ],
+          lockups: ['left', 'right']
+          }) }}
+            </div>
+            <div class="col-md-2">
+              {{ aposArea(page, 'bodybean3', {
+          controls: ['slideshow', 'video'],
+          styles: [
+          { value: 'p', label: 'Text' },
+          { value: 'h2', label: 'Heading' },
+          { value: 'h4', label: 'Subheading' },
+          { value: 'code', label: 'Code' }
+          ],
+          lockups: ['left', 'right']
+          }) }}
+            </div>
+            <div class="col-md-2">
+              {{ aposArea(page, 'bodybean4', {
+          controls: ['slideshow', 'video'],
+          styles: [
+          { value: 'p', label: 'Text' },
+          { value: 'h2', label: 'Heading' },
+          { value: 'h4', label: 'Subheading' },
+          { value: 'code', label: 'Code' }
+          ],
+          lockups: ['left', 'right']
+          }) }}
+            </div>
+            <div class="col-md-2">
+              {{ aposArea(page, 'bodybean5', {
+          controls: ['slideshow', 'video'],
+          styles: [
+          { value: 'p', label: 'Text' },
+          { value: 'h2', label: 'Heading' },
+          { value: 'h4', label: 'Subheading' },
+          { value: 'code', label: 'Code' }
+          ],
+          lockups: ['left', 'right']
+          }) }}
+            </div>
           </div>
           <!-- <div class="wowmetaposts entry-meta">
             <span class="wowmetadate"><i class="fa fa-clock-o"></i> 26/07/2014</span>
