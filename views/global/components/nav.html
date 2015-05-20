@@ -42,22 +42,26 @@
 	  			{% endif %}
 	  			</li>
 				{% for item in page.tabs %}
-			      <li style="border: 1px solid white;margin: 11px;"class="nav-item">
+			      <li style="margin: 11px;border:0px;"class="nav-item">
 			        <a style="font-size: 16px;padding: .5em;" href="{{ item.url }}" {% if page.slug == item.slug %}class="active"{% endif %}>{{ item.title }}</a>
 			      </li>
-                  <li style="border: 1px solid white;margin: 11px;"class="nav-item">
-                    <a style="font-size: 16px;padding: .5em;" href="http://coldbot-coffee.myshopify.com/" {% if page.slug == item.slug %}class="active"{% endif %}>Subscribe</a>
-                  </li>
-                  <li style="border: 1px solid white;margin: 11px;"class="nav-item">
+                 
+                  <!-- <li style="border: 1px solid white;margin: 11px;"class="nav-item">
                     <a style="font-size: 16px;padding: .5em;" href="/about" {% if page.slug == item.slug %}class="active"{% endif %}>About</a>
-                  </li>
+                  </li> -->
                   <style>
+                  .nav-item a{
+                    transition:all 500ms ease-out;
+                  }
                   .nav-item a:hover{
-                    color:black!important;
-                    background-color: white!important;
+                    border-bottom:2px solid white;
+                    transition:all 500ms ease-out;
                   }
                   </style>
 			    {% endfor %}
+           <li style="margin: 11px;border:0px"class="nav-item">
+                    <a style="font-size: 16px;padding: .5em;" href="http://coldbot-coffee.myshopify.com/" {% if page.slug == item.slug %}class="active"{% endif %}>Subscribe</a>
+                  </li>
 
 
       </ul>
