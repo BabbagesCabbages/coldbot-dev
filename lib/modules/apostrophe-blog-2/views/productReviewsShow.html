@@ -140,9 +140,17 @@
                 </div>
               </aside><aside id="recent-posts-3" class="widget widget_recent_entries">
                 <h1 class="widget-title section-title"><span>Where to buy...</span></h1>
-                <ul>
+                 <ul>
                   <li>
-                 
+                     {{ aposArea(page, 'bodyreview4', {
+              controls: ['style', 'bold', 'italic', 'createLink', 'unlink'],
+              styles: [
+                { value: 'h2', label: 'Heading' },
+                { value: 'p', label: 'Text' },
+                { value: 'h3', label: 'cursive' }
+              ],
+              lockups: ['left', 'right']
+              }) }}
                   </li>
                 </ul>
               </aside>
