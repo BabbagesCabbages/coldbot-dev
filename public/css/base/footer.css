@@ -74,11 +74,17 @@ footer .rightbd {
   border-right: 0;
 }
 footer.themefooter {
-  background-color: #202020;
-  color: #999;
+  background-color: white!important;
+  color: black!important;
   z-index: 1;
   position: relative;
   padding: 0px;
+}
+
+footer hr {
+  border-color:black;
+  color:black;
+  background-color: black;
 }
 footer.themefooter .widget-content {
   font-size: 13px;
@@ -119,13 +125,13 @@ footer.themefooter .widget_edd_product_details h3 {
   text-align: left;
 }
 footer.themefooter h3.widget-title {
-  color: #eee;
+  color: black;
   position: relative;
   padding-bottom: 16px;
   display: block;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
   margin-bottom: 20px;
-  font-size: 15px;
+  font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
 }
