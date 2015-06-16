@@ -33,7 +33,7 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    
+
                     <li class="nav-item">
 				{% if not page.ancestors.length %}
 					<!-- <a href="/" class="active">{{ page.title }}</a> -->
@@ -41,11 +41,15 @@
 				<!-- <a href="{{ page.ancestors[0].url }}" {% if page.slug == '/' %}class="active"{% endif %}>{{ page.ancestors[0].title }}</a> -->
 	  			{% endif %}
 	  			</li>
+          <li style="margin: 11px;border:0px;float:right;" class="nav-item">
+            <a style="font-size: 16px;padding: .5em;" href="http://coldbot-coffee.myshopify.com/account/login">Log in</a>
+          </li>
 				{% for item in page.tabs %}
 			      <li style="margin: 11px;border:0px;" class="nav-item">
 			        <a style="font-size: 16px;padding: .5em;" href="{{ item.url }}" {% if page.slug == item.slug %}class="active"{% endif %}>{{ item.title }}</a>
 			      </li>
-                 
+
+
                   <!-- <li style="border: 1px solid white;margin: 11px;"class="nav-item">
                     <a style="font-size: 16px;padding: .5em;" href="/about" {% if page.slug == item.slug %}class="active"{% endif %}>About</a>
                   </li> -->
