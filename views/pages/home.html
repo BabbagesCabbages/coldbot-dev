@@ -1,157 +1,150 @@
-{% extends "layout.html" %}
-{% include 'pageMacros.html' %}
-{% include 'components/_index.html' %}
-{% include 'svg/_index.html' %}
-
-{% block bodyClass %}{{ super() }} home-page{% endblock %}
-
-{# breadcrumbs are excluded from the homepage #}
-{% block breadcrumbs %}
-{% endblock %}
-
-{% block main %}
-   <div class="boxedlayout">
-
-    <!-- HEADER
+{% extends "layout.html" %} {% include 'pageMacros.html' %} {% include 'components/_index.html' %} {% include 'svg/_index.html' %} {% block bodyClass %}{{ super() }} home-page{% endblock %} {# breadcrumbs are excluded from the homepage #} {% block breadcrumbs %} {% endblock %} {% block main %}
+<div class="boxedlayout">
+  <!-- HEADER
     ================================================== -->
-
-    {{ nav(page, {classes: 'hide-mobile'}) }}
-    <!-- PAGE CONTENT
+  <!-- PAGE CONTENT
     ================================================== -->
+  <!-- TITLE BEGINS -->
+  <style>
+  footer.themefooter h3.widget-title:after {
+    content: "";
+    position: absolute;
+    display: block;
+    margin-left: 0;
+    top: 49px;
+    left: 0;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: darkblue;
+    width: 30px;
+    z-index: -1;
+  }
+  </style>
+  <style>
+  .container {
+    max-width: 100%!important;
+  }
 
-    <!-- TITLE BEGINS -->
-    <style>
-
-    footer.themefooter h3.widget-title:after {
-      content: "";
-      position: absolute;
-      display: block;
-      margin-left: 0;
-      top: 49px;
-      left: 0;
-      border-top-width: 2px;
-      border-top-style: solid;
-      border-top-color: darkblue;
-      width: 30px;
-      z-index: -1;
-    }    </style>
-    <style>
-    .container {
-      max-width:100%!important;
-    }
-    .sectioncredits {
-      top: -7px;
-    }
-    </style>
-    <div class="headerimage homeimg text-center" style="background: url(images/bg2.jpg)no-repeat fixed center center;background-size: cover;background-position: bottom;">
-      <div class="headercontent home">
-
-        <div style="position:relative;top:30px" class="container">
-       <!--  <div style="top: -20px;" class="innerbox"></div> -->
-          <div class="row">
-            <div class="col-md-12">
+  .sectioncredits {
+    top: -7px;
+  }
+  </style>
+  <div class="headerimage homeimg text-center" style="background: url(images/bg2.jpg)no-repeat fixed center center;background-size: cover;background-position: bottom;">
+    <div class="headercontent home">
+      <div style="position:relative;top:30px" class="container">
+        <!--  <div style="top: -20px;" class="innerbox"></div> -->
+        <div class="row">
+          <div class="col-md-12">
             <img src="images/logo.png" data-scrollreveal="enter bottom over 1.4s wait 0.2s">
-              <h1 style="font-family:'virgo'!important;" class="brand-heading" data-scrollreveal="enter top over 1.9s wait 0.2s">Coldbot . Coffee</h1>
-              <p style="font-family:'Lato'!important;color:white!important;font-size:25x!important" class="lead stuffy" data-scrollreveal="enter bottom over 1.9s wait 0.4s">
-                Fresh global coffee varieties delivered<br> right to your doorstep.<br><!-- <b>Starting at $17.10/month.</b> -->
-              </p>
-         <!--      <a href="http://www.coldbot-coffee.myshopify.com" data-scrollreveal="enter bottom over 1.9s wait 0.2s" class="butt-ex ex2 btn btn-default btn-lg explore">Subscribe now<i style="position: relative;top: 0px;left: 8px;" class="fa fa-check"></i></a>
+            <h1 style="font-family:'virgo'!important;" class="brand-heading" data-scrollreveal="enter top over 1.9s wait 0.2s">Coldbot . Coffee</h1>
+            <p style="font-family:'Lato'!important;color:white!important;font-size:25x!important" class="lead stuffy" data-scrollreveal="enter bottom over 1.9s wait 0.4s">
+              Fresh global coffee varieties delivered
+              <br> right to your doorstep.
+              <br>
+              <!-- <b>Starting at $17.10/month.</b> -->
+            </p>
+            <!--      <a href="http://www.coldbot-coffee.myshopify.com" data-scrollreveal="enter bottom over 1.9s wait 0.2s" class="butt-ex ex2 btn btn-default btn-lg explore">Subscribe now<i style="position: relative;top: 0px;left: 8px;" class="fa fa-check"></i></a>
  -->
-            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <!--     <div style="background-color:#202020;" class="white-space"> -->
 
-<!--     <div style="background-color:#202020;" class="white-space"> -->
-    </div>
-    <!-- TITLE ENDS -->
-
-    <!-- MAIN CONTENT BEGINS -->
-    <div style="padding: 0;margin: 0;width: 100%;" id="homepagetemplate" class="container padtop10 padbot40">
-        <div class="white-space2"></div>
-        <div style="position:relative;">
-<!--         <div class="dark-space2"></div> -->
+<!-- TITLE ENDS -->
+<!-- MAIN CONTENT BEGINS -->
+<div style="padding: 0;margin: 0;width: 100%;" id="homepagetemplate" class="container padtop10 padbot40">
+  <div class="white-space2"></div>
+  <div style="position:relative;">
+    <!--         <div class="dark-space2"></div> -->
+  </div>
+  <div style="padding:0!important;" class="actionbeforefooter text-left">
+    <div class="container">
+      <h2 style="text-align: center;color:rgb(22,22,22);" class="fresh-coffee"><b class="b-change">Taste a new coffee each month</b></h2>
+      <div class="row">
+        <div class="col-md-6">
+          <img class="img-responsive" style="margin-bottom:3em;width:600px" src="images/coldbot1.png">
         </div>
-<div style="padding:0!important;" class="actionbeforefooter text-left">
-  <div class="container">
-
-  <h2 style="text-align: center;color:rgb(22,22,22);" class="fresh-coffee"><b class="b-change">Taste a new coffee each month</b></h2>
-  <div class="row">
-  <div class="col-md-6">
-    <img class="img-responsive"   style="margin-bottom:3em;width:600px" src="images/coldbot1.png">
-  </div>
-    <div class="col-md-6">
-    <h4 style="color:rgb(22,22,22);" class="text-muted">Fresh Roasted Coffee,<br>From Around the World.</h4>
-      <span style="color:rgb(22,22,22);color: rgb(22,22,22);font-size: 15px;font-weight: 300;">Unique varieties from all over the world, roasted and shipped same day.<br> Each coffee is sourced for quality and roasted with the Cold brewing process in mind.<br><br>Convenient, tasty and accessible.</span><br><br><span style="color:rgb(22,22,22);" class="text-size">Start truly experiencing your coffee.<br><b>Starting at $17.10/month.</b><p style="  font-size: 15px;
+        <div class="col-md-6">
+          <h4 style="color:rgb(22,22,22);" class="text-muted">Fresh Roasted Coffee,<br>From Around the World.</h4>
+          <span style="color:rgb(22,22,22);color: rgb(22,22,22);font-size: 15px;font-weight: 300;">Unique varieties from all over the world, roasted and shipped same day.<br> Each coffee is sourced for quality and roasted with the Cold brewing process in mind.<br><br>Convenient, tasty and accessible.</span>
+          <br>
+          <br><span style="color:rgb(22,22,22);" class="text-size">Start truly experiencing your coffee.<br><b>Starting at $17.10/month.</b><p style="  font-size: 15px;
     margin-bottom: -26px;
-    color: rgb(22,22,22)!important;">Shipping included.</p></span><br><br>
-      <a style="background-color:rgb(22,22,22);color:white;" class="actionbutton" href="http://coldbot-coffee.myshopify.com/account/register">Subscribe Now</a>
-  </div>
-
-  <!-- <i style="margin-bottom: .6em;" class="fa fa-coffee fa-2x"></i>  -->
-    <svg style="z-index: -1;position: absolute;  right: 109px;width: 125px;opacity: .3;top: 200px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   width="228.013px" height="251.242px" viewBox="0 0 228.013 251.242" enable-background="new 0 0 228.013 251.242" xml:space="preserve">
-<path fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M4,110v97.656v0.172c3,21,38.606,38.414,82,38.414
-  s78-17.371,80-38.371v-0.215V110H4z"/>
-<path fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M185.589,205.615
-  c45.501-26.762,54.11-95.884,0-95.884"/>
-<rect x="22" y="77" rx="6" ry="6" fill="#000000" width="18" class="smoke-1" height="18"/>
-<rect x="75" y="77" rx="6" ry="6" fill="#000000" width="18"  class="smoke-2" height="18"/>
-<rect x="130" y="77" rx="6" ry="6" fill="#000000" width="18" class="smoke-3" height="18"/>
-</svg>
-<br>
-
-  </div>
-  </div>
-  <div style="background-color:#202020;" class="row">
-    <div class="col-md-12">
-      <div class="clear text-center sectionlatestitems">
-        <!-- <h2 class="maintitle">Coldbot Content</h2> -->
-
-         <h4 style="margin: 2em 0 1em 0;font-size: 30px;color:white">Expand your knowledge and your taste buds</h4>
-         <div class="separatr">
-           <span>
-           <i class="fa fa-reorder"></i>
-           </span>
-         </div>
-         <!--<p style="margin-bottom:75px!important;">With our subscription service you can drink quality coffee everyday.<br>We'll also teach you how to get the most out of every bean<br> Browse our <b style="color:#c4aa48">Recipes</b>, <b style="color:#55331d">Brewing Guides</b>, and <b style="color:#5b6020;">Product Reviews</b> to learn more. </p>-->
-      </div><br>
-    </div>
-
-    <div style="background-color:#202020;" class="row text-center">
-  <div style="position:relative" class="col-lg-3 col-md-offset-1">
-  <img style="position:relative;background-color:#202020;" width="210px"  src="images/feature2.png" />
-   <!-- <i style="color:#5b6020;" class="fa fa-file-text-o fa-4x"></i> --><br>
-    <h2 style="padding: .5em 0;background-color:#202020;color:white;">Recipes</h2>
-    <p style="background-color:#202020;padding: 7px 0;font-weight: 400;font-size: 16px;color:white!important;"> Our creative and tasty coffee recipes<br>will have you coming back for more.<br> Try a new take on coffee.</p>
-
-  </div><!-- /.col-lg-4 -->
-  <div style="position:relative" class="col-lg-4">
-  <img style="position:relative;background-color:#202020;" width="210px" src="images/feature3.png" />
-    <!-- <i style="color:#55331d;" class="fa fa-book fa-4x"></i> --><br>
-    <h2 style="padding: .5em 0;background-color:#202020;color:white;">Product Reviews</h2>
-    <p style="background-color:#202020;padding: 7px 0;font-weight: 400;font-size: 16px;color:white!important;">New coffee products are put to the test, <br>see which ones are worthy.</p>
-  </div><!-- /.col-lg-4 -->
-  <div style="position:relative" class="col-lg-3">
-  <img style="position:relative;background-color:#202020;" width="210px"   src="images/feature1.png" />
-    <!--  <i style="color:#c4aa48;" class="fa fa-star fa-4x"></i> --><br>
-    <h2 style="padding: .5em 0;background-color:#202020;color:white;">Brewing Guides</h2>
-     <p style="background-color:#202020;padding: 10px 0;font-weight: 400;font-size: 16px;color:white!important;">Don't spend countless hours searching the web. We'll show you how to get the most<br> out of your beans.</p>
-
+    color: rgb(22,22,22)!important;">Shipping included.</p></span>
+          <br>
+          <br>
+          <a style="background-color:rgb(22,22,22);color:white;" class="actionbutton" href="http://coldbot-coffee.myshopify.com/account/register">Subscribe Now</a>
+        </div>
+        <!-- <i style="margin-bottom: .6em;" class="fa fa-coffee fa-2x"></i>  -->
+        <svg style="z-index: -1;position: absolute;  right: 109px;width: 125px;opacity: .3;top: 200px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="228.013px" height="251.242px" viewBox="0 0 228.013 251.242" enable-background="new 0 0 228.013 251.242" xml:space="preserve">
+          <path fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M4,110v97.656v0.172c3,21,38.606,38.414,82,38.414
+  s78-17.371,80-38.371v-0.215V110H4z" />
+          <path fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M185.589,205.615
+  c45.501-26.762,54.11-95.884,0-95.884" />
+          <rect x="22" y="77" rx="6" ry="6" fill="#000000" width="18" class="smoke-1" height="18" />
+          <rect x="75" y="77" rx="6" ry="6" fill="#000000" width="18" class="smoke-2" height="18" />
+          <rect x="130" y="77" rx="6" ry="6" fill="#000000" width="18" class="smoke-3" height="18" />
+        </svg>
+        <br>
       </div>
     </div>
-     <div style="background-color:#202020;padding:0;  border: 0;bottom:-3px;" class="row actionbeforefooter text-center">
-       <div class="col-md-12 text-center">
-         <p><a class="actionbutton butt" href="/explore-coffee" role="button">Exlpore Coffee</a></p>
-       </div>
-     </div>
-
-         <div class="clear">
-         </div>
-       </div>
-
-<!--     <div id="homepagetemplate" class="container padtop10 padbot40">
+      <div style="background-color:#202020;" class="row">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="clear text-center sectionlatestitems">
+              <!-- <h2 class="maintitle">Coldbot Content</h2> -->
+              <h4 style="margin: 2em 0 1em 0;font-size: 30px;color:white">Expand your knowledge and your taste buds</h4>
+              <div class="separatr">
+                <span>
+             <i class="fa fa-reorder"></i>
+             </span>
+              </div>
+              <!--<p style="margin-bottom:75px!important;">With our subscription service you can drink quality coffee everyday.<br>We'll also teach you how to get the most out of every bean<br> Browse our <b style="color:#c4aa48">Recipes</b>, <b style="color:#55331d">Brewing Guides</b>, and <b style="color:#5b6020;">Product Reviews</b> to learn more. </p>-->
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+        <div style="background-color:#202020;" class="row text-center">
+          <div style="position:relative" class="col-lg-3 col-md-offset-1">
+            <img style="position:relative;background-color:#202020;" width="210px" src="images/feature2.png" />
+            <!-- <i style="color:#5b6020;" class="fa fa-file-text-o fa-4x"></i> -->
+            <br>
+            <h2 style="padding: .5em 0;background-color:#202020;color:white;">Recipes</h2>
+            <p style="background-color:#202020;padding: 7px 0;font-weight: 400;font-size: 16px;color:white!important;"> Our creative and tasty coffee recipes
+              <br>will have you coming back for more.
+              <br> Try a new take on coffee.</p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div style="position:relative" class="col-lg-4">
+            <img style="position:relative;background-color:#202020;" width="210px" src="images/feature3.png" />
+            <!-- <i style="color:#55331d;" class="fa fa-book fa-4x"></i> -->
+            <br>
+            <h2 style="padding: .5em 0;background-color:#202020;color:white;">Product Reviews</h2>
+            <p style="background-color:#202020;padding: 7px 0;font-weight: 400;font-size: 16px;color:white!important;">New coffee products are put to the test,
+              <br>see which ones are worthy.</p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div style="position:relative" class="col-lg-3">
+            <img style="position:relative;background-color:#202020;" width="210px" src="images/feature1.png" />
+            <!--  <i style="color:#c4aa48;" class="fa fa-star fa-4x"></i> -->
+            <br>
+            <h2 style="padding: .5em 0;background-color:#202020;color:white;">Brewing Guides</h2>
+            <p style="background-color:#202020;padding: 10px 0;font-weight: 400;font-size: 16px;color:white!important;">Don't spend countless hours searching the web. We'll show you how to get the most
+              <br> out of your beans.</p>
+          </div>
+        </div>
+        <div style="background-color:#202020;padding:0;  border: 0;bottom:-3px;" class="row actionbeforefooter text-center">
+          <div class="col-md-12 text-center">
+            <p><a class="actionbutton butt" href="/explore-coffee" role="button">Exlpore Coffee</a></p>
+          </div>
+        </div>
+        <div class="clear">
+        </div>
+      </div>
+      <!--     <div id="homepagetemplate" class="container padtop10 padbot40">
     <div class="row">
       <div class="col-md-12">
 
@@ -208,26 +201,22 @@
           </div>
           </div>
           </div> -->
-          <div class="row">
-            <div class="col-md-12">
-              <div height="200px" class="col-md-4 img1">
-              </div>
-              <div  height="200px" class="col-md-4 img2">
-              </div>
-              <div  height="200px" class="col-md-4 img3">
-              </div>
-            </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div height="200px" class="col-md-4 img1">
           </div>
-          <!-- .wowitemboxlist-->
+          <div height="200px" class="col-md-4 img2">
+          </div>
+          <div height="200px" class="col-md-4 img3">
+          </div>
         </div>
       </div>
+      <!-- .wowitemboxlist-->
     </div>
-
-    </div>
-    <!-- MAIN CONTENT ENDS -->
-
-    <!-- FOOTER
+  </div>
+</div>
+</div>
+<!-- MAIN CONTENT ENDS -->
+<!-- FOOTER
     ================================================== -->
-
-
 {% endblock %}

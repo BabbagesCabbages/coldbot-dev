@@ -12,10 +12,10 @@
                                 .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
                                 .addTo(controller);
         </script>
-<nav class="navbar navbar-custom navbar-fixed-top{% if options.classes%} {{options.classes}}{% endif%} " role="navigation" role="navigation">
-        <div class="container">
+<nav class="navbar navbar-custom {% if options.classes%} {{options.classes}}{% endif%} " role="navigation" role="navigation">
+        <div class="container-fluid">
             <div style="padding-left: 35px;" class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <button style="z-index: 20;" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapse">
                     <i class="fa fa-bars"></i>
                 </button>
                 <div class="header">
@@ -24,24 +24,15 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul id="links" class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <!-- <li id="animate1" class="nav-item">
-                        <a href="">Recipe</a>
-                    </li> -->
+            <div class="navbar-collapse collapse in" aria-expanded="false">
+                <ul id="links" class="nav navbar-nav" >
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
 
                     <li class="nav-item">
-				{% if not page.ancestors.length %}
-					<!-- <a href="/" class="active">{{ page.title }}</a> -->
-				{% else %}
-				<!-- <a href="{{ page.ancestors[0].url }}" {% if page.slug == '/' %}class="active"{% endif %}>{{ page.ancestors[0].title }}</a> -->
-	  			{% endif %}
-	  			</li>
-          <li style="margin: 11px;border:0px;float:right;" class="nav-item">
+	  			          </li>
+          <li style="margin: 11px;border:0px;float:f;" class="nav-item">
             <a style="font-size: 16px;padding: .5em;" href="http://coldbot-coffee.myshopify.com/account/login">Log in</a>
           </li>
 				{% for item in page.tabs %}
@@ -49,19 +40,6 @@
 			        <a style="font-size: 16px;padding: .5em;" href="{{ item.url }}" {% if page.slug == item.slug %}class="active"{% endif %}>{{ item.title }}</a>
 			      </li>
 
-
-                  <!-- <li style="border: 1px solid white;margin: 11px;"class="nav-item">
-                    <a style="font-size: 16px;padding: .5em;" href="/about" {% if page.slug == item.slug %}class="active"{% endif %}>About</a>
-                  </li> -->
-                  <style>
-                  .nav-item a{
-                    transition:all 500ms ease-out;
-                  }
-                  .nav-item a:hover{
-                    border-bottom:2px solid white;
-                    transition:all 500ms ease-out;
-                  }
-                  </style>
 			    {% endfor %}
            <li style="margin: 11px;border:0px"class="nav-item">
                     <a style="font-size: 16px;padding: .5em;" href="http://coldbot-coffee.myshopify.com/account/register" {% if page.slug == item.slug %}class="active"{% endif %}>Subscribe</a>
@@ -70,10 +48,16 @@
 
       </ul>
     </div>
-    <!-- /.navbar-collapse -->
-
-    <!-- /.container -->
   </div>
 </nav>
 
+<style>
+.nav-item a{
+  transition:all 500ms ease-out;
+}
+.nav-item a:hover{
+  border-bottom:2px solid white;
+  transition:all 500ms ease-out;
+}
+</style>
 {% endmacro %}
